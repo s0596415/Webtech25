@@ -1,0 +1,63 @@
+
+header{
+    background-color: #afafaf;
+    font-family: Verdana;  
+    text-align: center;
+   
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    text-align: center;
+}
+nav{
+    margin-top: 3%; /* Abstand nach oben */
+    margin-bottom: 3%; /* Abstand anch unten*/
+}
+ a {
+    background-color: #0082D1;
+    padding: 8px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 7px;
+ }
+ nav a:hover{
+    background-color: #afafaf;
+    color: #FF5F00;
+ }
+body {
+    font-family: Verdana;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+th, td 
+{
+    /*Jede Tabellenzelle bekommt einen schwarzen rahmen */
+    border: 1px solid #000000; 
+    /* der Abstand des Inhaltes zum Rahmen*/
+    padding: 8px 12px;
+    /* Text  wird linksbündig ausgerichtet*/
+    text-align: left;
+  }
+
+  th 
+  {
+    background-color: #76B900;
+  }
+
+  footer 
+  {
+  background-color: #FF5F00;
+  padding: 20px 100px;
+  font-family: Verdana;
+  text-align: center;
+  }
