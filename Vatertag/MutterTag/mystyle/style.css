@@ -10,12 +10,12 @@ body {
   /*  linear-gradient ist darfür zuständig das farbverläufe entstehen.
   Der Winkel beträgt 135 grad. Beliebig viele Farben möglich. wird durch komma getrennt*/
 	perspective:800px;
-    background: rgba(122,129,135,1);
+    background: rgb(124, 153, 177);
 	background-image: linear-gradient(135deg,
-    rgba(214, 245, 215, 0.9) 0%,
-    rgba(81, 152, 114, 0.9) 20%,
-    rgba(61,90,128,0.9) 50%,
-    rgba(85,53,85,0.9) 100%);
+    rgba(170, 183, 215, 0.9) 0%,
+    rgba(81, 81, 152, 0.9) 20%,
+    rgba(38, 59, 86, 0.9) 50%,
+    rgba(55, 37, 55, 0.9) 100%);
 
 }
 
@@ -39,7 +39,7 @@ h1{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 48px;
   font-weight: 400;
-  color: #ADD3AE;
+  color: #b6c5d6;
 	margin: 50px 0;
 	text-align: center;
 }
@@ -186,7 +186,7 @@ h3{
 
 /* Ändere diese Zeile, um den Brief höher zu machen */
 #checkbox:checked + #letter_wrap > #letter {
-    height: 650px; /* Erhöht von 520px auf 650px */
+    height: 800px; /* Erhöht von 520px auf 650px */
     -webkit-transition: all 1s ease-in-out 2s;
     -moz-transition: all 1s ease-in-out 2s;
     -o-transition: all 1s ease-in-out 2s;
@@ -195,7 +195,7 @@ h3{
 
 /* Erhöhe auch die Höhe des gesamten letter_wrap Elements */
 #checkbox:checked + #letter_wrap {
-    height: 900px; /* Erhöht von 776px auf 900px */
+    height: 1100px; /* Erhöht von 776px auf 900px */
     top: -200px;
     -webkit-transition: all 1s ease-in-out 2s;
     -moz-transition: all 1s ease-in-out 2s;
@@ -214,4 +214,4 @@ h3{
 
 /* Optional: Wenn das immer noch nicht ausreicht, kannst du auch dies anpassen */
 #wrap {
-    height: 1100px; /* Erhöht von 1000px auf 1100px */}
+    height: 1200px; /* Erhöht von 1000px auf 1100px */}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../styles/bootstrap-5.3.6-dist/css/bootstrap.min.css" > <!--Pfad zur Datei-->
+    <title>Bootstrap</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <main class="container">
+     
+            <h1 class="m-5">Teilnehmerin Registrierung</h1>  <!--"Margin Stufe 5" - das heißt, es wird ein mittlerer bis großer Abstand auf allen Seiten dieser Überschrift angewendet-->
+     
+
+        <div class="row">
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class ="from-floating mb-3">
+                    <input class="form-control " type="text" id="firstName" placeholder="First name" >
+                    <label for="firstName"></label>
+                </div>
+            </div>
+
+        
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="from-floating mb-3">
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                     <label for="lastName"> </label>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="from-floating mb-3">
+                    <input type="text" class="form-control" id="email" placeholder="E-Mail">
+                    <label  for="email"></label>
+                </div>
+            </div>
+         
+            <div class="col-12 col-md-6 col-xl-3">
+                <div class="from-floating mb-3">
+                    <input type="text" class="form-control" id="ipAddresse" placeholder="IP-Adresse">
+                    <label for="IP-Adresse"></label>
+                </div>
+            </div>
+    </div>
+
+    <div class ="row">
+            <div class="d-grid gap-2 d-md-block">
+               <!--buttons müssen in der selben div class sein-->
+                <button  type="Abbrechen"  class="btn btn-outline-danger">Abbrechen</button> 
+                <button onclick="register()" type="Registrieren" class="btn btn-outline-success">Registrieren</button>
+                                <!--super wichtig!! ohne onclick geht es nicht-->
+            </div>
+    </div>
+    <h3 id="h3" class="mt-5">Eingegebene Werte</h3>
+    <ul id="liste" class="list-group">
+
+    </ul>
+    </main>
+    </body>
+
+    <script >
+
+        function register(){
+            console.log('Button geklickt')
+            let inputFirstName=document.querySelector('#firstName')
+            console.log('input  ', inputFirstName)
+
+            let inputFirstNameValue = inputFirstName.value
+            let inputLastNameValue = document.querySelector('#lastName').value
+            let inputEmailValue = document.querySelector('#email').value
+            let inputIPAddressValue = document.querySelector('#ipAddresse').value
+
+            console.log('firstName value :', inputFirstNameValue)
+            console.log('lastName value :', inputLastNameValue)
+            console.log('email value :', inputEmailValue)
+            console.log('Addresse value :', inputIPAddressValue)
+
+            let liste=document.querySelector('#liste')
+            if( inputFirstNameValue != ""&&
+                inputLastNameValue !=""&&
+                inputEmailValue != ""&&
+                inputIPAddressValue !="")
+        
+            {
+            liste.innerHTML = `
+            <li class="list-group-item"> first name: ${inputFirstNameValue} </li>
+            <li class="list-group-item"> last name: ${inputLastNameValue} </li>
+            <li class="list-group-item"> email: ${inputEmailValue} </li>
+            <li class="list-group-item"> ipAddresse: ${inputIPAddressValue} </li>
+            `
+            }
+
+            else
+            {
+            liste.innerHTML='<li style="color:red;">Bitte alle Felder ausfüllen!</li>'
+            }
+        }
+    </script>
+
+    </html>

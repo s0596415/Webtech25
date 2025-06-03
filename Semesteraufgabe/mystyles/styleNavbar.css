@@ -1,0 +1,134 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 10px 5%;
+      background-color: rgb(255, 252, 252);
+      position: relative;
+    }
+
+    .Logo {
+      max-height: 90px;
+      cursor: pointer;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      flex-direction: row;
+    }
+
+    .navbar li a {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgb(88, 61, 61);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar li a:hover {
+      color: brown;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 9999px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 0 10px;
+      width: 250px;
+      max-width: 100%;
+      transition: width 0.3s ease;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 8px;
+      font-size: 16px;
+      background-color: transparent;
+    }
+
+    .search-button {
+      background-color: rgb(207, 121, 121);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      font-size: 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .search-button:hover {
+      background-color: brown;
+    }
+
+    .hamburger {
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: rgb(88, 61, 61);
+      cursor: pointer;
+      display: none; /* Standardmäßig ausblenden */
+    }
+
+    /* Dropdown-Menü bei kleiner Ansicht */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .mobile-menu a {
+      color: white;
+      padding: 10px 0;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #555;
+    }
+
+    /* ========== RESPONSIVE STYLES ========== */
+    @media (max-width: 768px) {
+      .navbar {
+        display: none; /* Textlinks ausblenden */
+      }
+
+      .hamburger {
+        display: block; /* Hamburger anzeigen */
+      }
+
+      .search-box {
+        width: 100%;
+        max-width: 250px;
+        margin-top: 10px;
+      }
+
+      .mobile-menu.show {
+        display: flex;
+      }
+    }

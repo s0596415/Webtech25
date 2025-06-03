@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        
+    <title>Übung 5</title>
+    <style>
+        img {
+            width: 50px;
+            
+            
+        }
+    </style>
+</head>
+<body class="container" onload="init()">
+    <h1>Sädte</h1>
+    <div class="row my-4">
+        <div class="col-2">
+            <label for="filter">Filter:</label>
+        </div>
+        <div class="col-10">
+            <input type="text" class="form-control" id="filter" oninput="createTable()"/>
+        </div>     
+    </div>
+    <table class="table table-striped table-hover align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Nr</th>
+                <th scope="col">Jahr</th>
+                <th scope="col">Stadt</th>
+                <th scope="col">Link</th>
+                <th scope="col">Bild</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            
+        </tbody>
+    </table>
+    <script>
+        let staedtearr = [];
+
+        async function getStaedte() {
+
+            const request = new Request('staedte.json', {
+                    method: 'GET',      // GET ist default
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+            const response = await fetch(request);
+            console.log(response);
+            return response.json();
+        }
+
+        function createTable() {
+            let input = document.getElementById('filter').value;
+
+
+            if(staedtearr.length > 0)
+            {
+                let tbody = document.getElementById('tbody');
+                tbody.innerHTML = '';
+                let nr = 1;
+                    for(let stadtObj of staedtearr) {
+                        console.log('stadt : ', stadtObj.jahr)
+                        if(stadtObj.stadt.toLowerCase().includes(input.toLowerCase()) || stadtObj.jahr.toString().includes(input))
+                        tbody.innerHTML +=`
+                        <tr>
+                            <td> ${nr}</td>
+                            <td> ${stadtObj.jahr}</td>
+                            <td> ${stadtObj.stadt}</td>
+                            <td><a class="btn btn-success btn-sm" href="${stadtObj.link}">Info</a></td>
+                            <td> <img src="${stadtObj.bild}" alt="${stadtObj.stadt}"/></td>
+                        </tr>`
+                        nr++;
+                       
+
+                        // hier muessen jetzt die einzelnen Zeilen in die Tabelle eingelesen werden
+                        // das Staedte-Array muss ausgelesen werden (siehe for(stadt of staedtearr)
+                        // Tipp: zunaechst einfach alle anzeigen lassen und erst dann das Filtern einbauen
+                        // Filtern: die Eingabe mit dem jeweiligen Gruendungsjahr bzw. der jeweiligen Stadt
+                        // vergleichen (siehe z.B. substring(0, input.length) und toLowerCase())
+                        // wenn match, dann entsprechende Zeile einfuegen; sonst nicht
+                    }
+            }
+        }
+
+        async function init() {
+                    
+            let bodyObj = await getStaedte()
+            console.log('responseObj', bodyObj)
+            staedtearr = await bodyObj.staedte;
+            console.log('staedtearr', staedtearr)
+            createTable()
+        }
+
+        
+    </script>
+</body>
+</html>
