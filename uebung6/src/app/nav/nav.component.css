@@ -1,0 +1,20 @@
+#nav{
+    background-color: blueviolet;
+    color: white;
+
+    li{
+        display: inline;
+        padding: 2%;
+
+    a, 
+    a:visited,
+    a:link,
+    a:active,
+    a:hover{
+        text-decoration: none;
+        color: white;
+    }
+
+    
+}
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Anleitung.css">
+    <link rel="stylesheet" href="../../Navbar/nav.css">
+    <title>Amigurumi</title>
+</head>
+<body>
+<!-- Hier wird die Navbar geladen -->
+  <div id="navbar-placeholder"></div>
+
+ <!-- Kategorien Section -->
+    <section class="kategorien-section">
+        <h2 class="kategorien-titel">Hausschuhe</h2>
+        
+        <div class="wrapper">
+            <a class="Kategorien" href="../details/Amigurumi/">
+                <div class="häkelname">
+                    <p>Blumenstecker</p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../../images/Webtech-Häkeln/Biene-Blätter .JPG" alt="Amigurumi ">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../details/Anhänger/">
+                <div class="häkelname">
+                    <p>große Biene</p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../../images/Webtech-Häkeln/Biene-vorne(g).jpg" alt="Anhänger">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Huhn</p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../../images/Webtech-Häkeln/Huhn-vorne.JPG" alt="klassiker">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Küken </p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../../images/Webtech- Galerie/Kücken-vorne.jpg" alt="kpop">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Koala </p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../../images/Webtech-Häkeln/Koala-vorne.JPG" alt="kpop">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Wal </p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../../images/Webtech-Häkeln/Wal-vorne.jpg" alt="kpop">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>katze</p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../images/Webtech-Häkeln/Ligthstick-vorne.jpg" alt="kpop">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Pinguin</p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../images/Webtech- Galerie/Duft Glass.jpg" alt="kpop">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Drache</p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../images/Webtech-Häkeln/Ligthstick-vorne.jpg" alt="kpop">
+                </div>
+            </a>
+
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Miffy </p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../images/Webtech- Galerie/FesteMaschen-kücken.jpg" alt="kpop">
+                </div>
+            </a>
+            
+            <a class="Kategorien" href="../Anleitungen/">
+                <div class="häkelname">
+                    <p>Yoshi </p>
+                </div>
+                <div class="häkelimage">
+                    <img src="../images/Webtech- Galerie/FesteMaschen-kücken.jpg" alt="kpop">
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+  <!-- JavaScript lädt navbar.html dynamisch -->
+  <script>
+     fetch("../../Navbar/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+
+        // Danach das JS für Navbar laden
+        const script = document.createElement("script");
+        script.src = "../../Navbar/nav.js";
+        document.body.appendChild(script);
+      });
+    
+  </script>
+
+
+</body>
+</html>

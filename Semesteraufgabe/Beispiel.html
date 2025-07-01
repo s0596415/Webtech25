@@ -174,18 +174,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 48px;
     }
 
     .slide-nav-toggle {
       background: white;
       border: none;
-      padding: 0;
+      padding: 8px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      gap: 4px;
+      gap: 2px;
+      height: 48px;
+      min-width: 48px;
+
     }
 
     .slide-nav-toggle i {
@@ -469,25 +473,8 @@
         max-width: 500px;
       }
     }
-    @media (max-width: 480px) {
-            .wrapper {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .kategorien-titel {
-                font-size: 1.5rem;
-                margin-bottom: 25px;
-            }
-            
-            .häkelimage img {
-                height: 180px;
-            }
-        }
 
-
-
-         /* Hauptcontainer für Kategorien */
+      /* Hauptcontainer für Kategorien */
         .kategorien-section {
             padding: 60px 20px 40px 20px;
             max-width: 1200px;
@@ -520,6 +507,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             background: white;
+            height: 350px; /* Feste Höhe für alle Kästen */
         }
 
         .Kategorien:hover {
@@ -529,13 +517,17 @@
 
         .häkelname {
             text-align: center;
-            padding: 20px 15px;
+            padding: 15px;
             font-family: 'Times New Roman', Times, serif;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             background: #f8f8f8;
             border-bottom: 1px solid #eee;
             margin: 0;
+            min-height: 60px; /* Mindesthöhe für Titel */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .häkelname p {
@@ -547,21 +539,116 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 15px;
             background: white;
         }
 
         .häkelimage img {
             width: 100%;
-            height: 200px;
+            height: 250px; /* Größere Bilder */
             object-fit: cover;
             border-radius: 4px;
         }
 
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .wrapper {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .Kategorien {
+                height: 400px; /* Etwas höher auf Tablet */
+            }
+            
+            .häkelimage img {
+                height: 300px; /* Größere Bilder auf Tablet */
+            }
+            
+            .häkelname {
+                font-size: 1.4rem; /* Größere Schrift */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .kategorien-titel {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .kategorien-section {
+                padding: 40px 15px 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .Kategorien {
+                height: 350px;
+            }
+            
+            .kategorien-titel {
+                font-size: 1.5rem;
+                margin-bottom: 25px;
+            }
+            
+            .häkelimage img {
+                height: 250px;
+            }
+        }
+
+        /* Basis-Styling für Demo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23e8d5c4" width="1200" height="400"/></svg>');
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b4b3b;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .welcome-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .welcome-section h2 {
+            color: #8b4b3b;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .welcome-section p {
+            line-height: 1.6;
+            color: #666;
+            font-size: 1.1rem;
+        }
+    
+    
+    
+   
   </style>
 </head>
 <body>
-
 <header>
 
   <!-- Top Bar mit Logo, Suchfeld und rechten Elementen -->
@@ -631,9 +718,9 @@
     <img class="Hintergrundbild" src="images/Hauptbild (1).png" style="width: 100%; height:100%";>
 <!-- Zusätzlicher Inhalt -->
     <div style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
-        <h2 style="color: #8b4b3b; margin-bottom: 20px;">Willkommen bei FadenZauber</h2>
+        <h1 style="color: #8b4b3b; margin-bottom: 20px;">Willkommen bei FadenZauber</h1>
         <p style="line-height: 1.6; color: #666;">
-            Hier findest du alles rund ums Häkeln. 
+ Hier findest du alles rund ums Häkeln. 
             Entdecke unsere Anleitungen, lass dich von der Galerie inspirieren und lerne in unseren Tutorials neue Techniken.
         </p>
     </div>
@@ -680,6 +767,38 @@
             </a>
         </div>
     </section>
+
+
+    <section class="kategorien-section">
+        <h2 class="kategorien-titel">Galerie</h2>
+        
+        <div class="wrapper">
+            <a class="Kategorien" href="Anleitungen.html">
+                
+                <div class="häkelimage">
+                    <img src="images/Webtech-Häkeln/3Bienen- quer.JPG"Amigurumi ">
+                </div>
+            </a>
+
+              <a class="Kategorien" href="Anleitungen.html">
+                
+                <div class="häkelimage">
+                    <img src="images/Webtech-Häkeln/Wal-vorne.jpg"Amigurumi ">
+                </div>
+            </a>
+              <a class="Kategorien" href="Anleitungen.html">
+                
+                <div class="häkelimage">
+                    <img src="images/Webtech-Häkeln/Anhänger-Glückskeks(2).JPG"Amigurumi ">
+                </div>
+            </a>
+              <a class="Kategorien" href="Anleitungen.html">
+                
+                <div class="häkelimage">
+                    <img src="images/Webtech-Häkeln/Huhn-vorne.JPG"Amigurumi ">
+                </div>
+            </a>
+
 <script>
   function toggleSlideMenu() {
     const slideMenu = document.getElementById("slideMenu");
