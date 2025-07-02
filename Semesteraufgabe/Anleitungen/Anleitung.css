@@ -7,7 +7,7 @@
 
         .kategorien-titel {
             color: #8b4b3b;
-            font-size: 2rem;
+            font-size: 40px;
             margin-bottom: 40px;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,11 +26,11 @@
             flex-direction: column;
             box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             text-decoration: none;
-            color: rgb(11, 11, 11);
+            color:#5D3636; /*Farbe Text*/
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: rgb(168, 116, 116);
+        
             height: 350px; /* Feste Höhe für alle Kästen */
         }
 
@@ -42,10 +42,10 @@
         .häkelname {
             text-align: center;
             padding: 15px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 660;
             font-size: 1.3rem;
-            background:rgb(244, 181, 181);
+            background:#F6EAEA; /*Farbe kasten vom text*/
             border-bottom: 1px solid #eee;
             margin: 0;
             min-height: 60px; /* Mindesthöhe für Titel */
@@ -77,7 +77,7 @@
         /* Responsive Design */
         @media (max-width: 1024px) {
             .wrapper {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 25px;
             }
             
@@ -97,7 +97,7 @@
         @media (max-width: 768px) {
             .wrapper {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+                gap: 10px;
             }
             
             .kategorien-titel {
@@ -130,40 +130,4 @@
             }
         }
 
-        /* Basis-Styling für Demo */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fafafa;
-        }
-
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23e8d5c4" width="1200" height="400"/></svg>');
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8b4b3b;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        .welcome-section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-        }
-
-        .welcome-section h2 {
-            color: #8b4b3b;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        .welcome-section p {
-            line-height: 1.6;
-            color: #666;
-            font-size: 1.1rem;
-        }
-    
+       

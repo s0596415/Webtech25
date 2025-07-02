@@ -259,20 +259,19 @@ header {
     padding: 0;
 }
 
-.slide-menu-nav li {
-    border-bottom: 1px solid #eee;
-}
 
 .slide-menu-nav li:last-child {
     border-bottom: none;
 }
 
-.slide-menu-nav a {
+.slide-menu-nav li a {
+    border-bottom: 1px solid #eee;
     display: block;
     padding: 15px 20px;
     color: #333;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-size: 20px;
 }
 
 .slide-menu-nav a:hover {

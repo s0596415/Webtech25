@@ -120,7 +120,7 @@
     }
 
     .navbar li a {
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 500;
       color: white;
       text-decoration: none;
@@ -462,6 +462,8 @@
       }
     }
 
+
+
       /* Hauptcontainer für Kategorien */
         .kategorien-section {
             padding: 60px 20px 40px 20px;
@@ -471,7 +473,7 @@
 
         .kategorien-titel {
             color: #8b4b3b;
-            font-size: 2rem;
+            font-size: 40px;
             margin-bottom: 40px;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -485,12 +487,12 @@
         }
 
         .Kategorien {
-            border: 1px solid rgb(243, 243, 238);
+            border: 1px solid #F6EAEA;
             display: flex;
             flex-direction: column;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            box-shadow: rgba(231, 232, 234, 0.2) 0px 8px 24px;
             text-decoration: none;
-            color: rgb(247, 246, 246);
+            color: #5D3636;
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -507,9 +509,9 @@
             text-align: center;
             padding: 15px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 600;
-            font-size: 1.3rem;
-            background: rgb(207, 121, 121);
+            font-weight: 660;
+            font-size: 23px;
+            background: #F6EAEA;
             border-bottom: 1px solid #f1eded;
             margin: 0;
             min-height: 60px; /* Mindesthöhe für Titel */
