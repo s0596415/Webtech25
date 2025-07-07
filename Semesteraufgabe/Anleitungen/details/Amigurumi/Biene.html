@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/Semesteraufgabe/Navbar/nav.css">
     <link rel="stylesheet" href="beitspiel.css">
     <link rel="stylesheet" href="/Semesteraufgabe/Anleitungen/details/details.js">
-    <title>Anleitung -Biene Blumenstecker</title>
+    <title>Anleitung -Biene </title>
 </head>
 <body>
     
@@ -21,10 +21,10 @@
             <!-- Bilder -->
             <div class="card">
                 <div class="image-container">
-                    <img id="main-image" src="/Semesteraufgabe/images/Webtech-Häkeln/Biene-vorne.jpg" alt="Bienen Blumenstecker">
+                    <img id="main-image" src="/Semesteraufgabe/images/Webtech-Häkeln/Biene-vorne(g).jpg" alt="Bienen Blumenstecker">
                     <button class="nav-arrow left" onclick="prevImage()">‹</button>
                     <button class="nav-arrow right" onclick="nextImage()">›</button>
-                    <div class="image-counter" id="image-counter">1 / 3</div>
+                    <div class="image-counter" id="image-counter">1 / 2</div>
                 </div>
             </div>
 
@@ -109,6 +109,7 @@
 </body>
 <script src="beispiel.js"></script>
 <script>
+
 fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
   .then(r => r.text())
   .then(html => {
@@ -120,6 +121,30 @@ fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
     document.body.appendChild(s)
 
   });
+
+  
+// BILD NAVIGATION
+const images = [
+    "/Semesteraufgabe/images/Webtech-Häkeln/Biene-vorne(g).jpg",
+    "/Semesteraufgabe/images/Webtech-Häkeln/Biene-seite(g).jpg"
+  
+];
+let currentImageIndex = 0;
+
+function updateImage() {
+    document.getElementById('main-image').src = images[currentImageIndex];
+    document.getElementById('image-counter').textContent = `${currentImageIndex + 1} / ${images.length}`;
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImage();
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage();
+}
 </script>
 
 </html>

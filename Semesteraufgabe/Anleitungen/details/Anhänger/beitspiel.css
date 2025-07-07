@@ -1,4 +1,4 @@
-/* RESET & BASE */
+/* === RESET & BASE === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -12,7 +12,7 @@ h2{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/*  LAYOUT */
+/* === LAYOUT === */
 .main-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -23,7 +23,7 @@ h2{
     .main-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/*CARDS */
+/* === CARDS === */
 .card {
     background: white;
     border-radius: 10px;
@@ -32,7 +32,7 @@ h2{
     margin-bottom: 20px;
 }
 
-/*  IMAGES */
+/* === IMAGES === */
 .image-container {
     position: relative;
     aspect-ratio: 1;
@@ -69,18 +69,18 @@ h2{
     border-radius: 20px;
 }
 
-/* YOUTUBE - LINK*/
+/* === YOUTUBE === */
 .youtube-container { display: flex; align-items: center; gap: 10px; }
-.youtube-icon { color: #ef4444; font-size: 20px; } /*pfeil*/
-.youtube-link { color: #3b82f6; text-decoration: none; } /*Video ansehen*/
+.youtube-icon { color: #ef4444; font-size: 20px; }
+.youtube-link { color: #3b82f6; text-decoration: none; }
 
-/* MASCHEN ZÄHLER */
+/* === COUNTER === */
 .counter-display { text-align: center; margin: 30px 0; }
 
 .counter-number {
     font-size: 70px;
     font-weight: bold;
-    color: #e91e63; /*Zahl*/
+    color: #e91e63;
     margin-bottom: 10px;
 }
 
@@ -97,11 +97,11 @@ h2{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background: #e5e7eb;/*10er, 20er kasten*/
-    color: #374151; /*Textfarbe von 10er 20er*/
+    background: #e5e7eb;
+    color: #374151;
 }
 
-.step-btn.active { background: #e91e63; color: white; } /*Farbe von 1er text und hintergrund*/
+.step-btn.active { background: #e91e63; color: white; }
 
 .counter-buttons {
     display: flex;
@@ -118,25 +118,24 @@ h2{
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-    color: white; /*Farbe vom minus - und plus + Zeichen*/
+    color: white;
 }
 
-.counter-btn.minus { background: rgb(213, 114, 114); } /* Minus Button*/
-.counter-btn.plus { background: rgb(79, 179, 97); } /*Plus Button*/
+.counter-btn.minus { background: rgb(213, 114, 114); }
+.counter-btn.plus { background: rgb(79, 179, 97); }
 
-/*Zurücksetzen button*/
 .reset-btn {
     width: 100%;
     padding: 12px;
-    background: #555960;/*Hintergrund buttom*/
-    color: white; /*Text*/
+    background: #555960;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
 }
 
-/* BUTTONS  */
+/* === BUTTONS === */
 .btn {
     padding: 8px 16px;
     border: none;
@@ -148,12 +147,12 @@ h2{
     gap: 5px;
 }
 
-.btn.blue { background: #37433e; color: white; } /*Bearbeiten*/
-.btn.green { background: #22c55e; color: white; } /*Speichern*/
-.btn.gray { background: #6b7280; color: white; } /*Abbrechen*/
-.btn.red { background: #ef4444; color: white; } /*x beim bearbeiten(löcht runde)*/
+.btn.blue { background: #37433e; color: white; }
+.btn.green { background: #22c55e; color: white; }
+.btn.gray { background: #6b7280; color: white; }
+.btn.red { background: #ef4444; color: white; }
 
-/*CONTENT */
+/* === CONTENT === */
 
 .section-header {
     display: flex;
@@ -224,7 +223,7 @@ input, textarea {
     cursor: pointer;
 }
 
-/*UTILITIES */
+/* === UTILITIES === */
 .hidden { display: none !important; }
 
 button:hover { opacity: 0.8; }

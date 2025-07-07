@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/Semesteraufgabe/Navbar/nav.css">
     <link rel="stylesheet" href="beitspiel.css">
     <link rel="stylesheet" href="/Semesteraufgabe/Anleitungen/details/details.js">
-    <title>Anleitung Anhänger-Erdbeere</title>
+    <title>Anleitung -Küken</title>
 </head>
 <body>
     <header>
@@ -21,8 +21,10 @@
             <!-- Bilder -->
             <div class="card">
                 <div class="image-container">
-                    <img id="main-image" src="/Semesteraufgabe/images/Webtech-Häkeln/Anhänger-Erdbeere .JPG" alt="Anhänger-Erdbeere">
-                    
+                    <img id="main-image" src="/Semesteraufgabe/images/Webtech- Galerie/Kücken-vorne.jpg" alt="Bienen Blumenstecker">
+                    <button class="nav-arrow left" onclick="prevImage()">‹</button>
+                    <button class="nav-arrow right" onclick="nextImage()">›</button>
+                    <div class="image-counter" id="image-counter">1 / 2</div>
                 </div>
             </div>
 
@@ -119,8 +121,27 @@ fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
 
   });
   
+// BILD NAVIGATION
+const images = [
+    "/Semesteraufgabe/images/Webtech- Galerie/Kücken-vorne.jpg",
+    "/Semesteraufgabe/images/Webtech- Galerie/Kücken-Seite.jpg"
+];
+let currentImageIndex = 0;
 
+function updateImage() {
+    document.getElementById('main-image').src = images[currentImageIndex];
+    document.getElementById('image-counter').textContent = `${currentImageIndex + 1} / ${images.length}`;
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImage();
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage();
+}
 </script>
 
 </html>
-
