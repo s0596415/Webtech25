@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" href="../styles/bootstrap-5.3.6-dist/css/bootstrap.min.css" > <!--Pfad zur Datei-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"><!--bootstrap  icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--W3 Mobile Navigation Menu-->
+    <link rel="stylesheet" href="../Navbar/nav.css">
+  
+    <title>Tutorial</title>
+</head>
+<body>
+      <!-- Hier wird die Navbar geladen -->
+  <div id="navbar-placeholder"></div>
+<video width="320" height="240" controls>
+      <source src=”https://youtu.be/Ar2q4_0wJ6w?si=tAAMoZsV4minBu9a” type=video/ogg>
+</body>
+<!-- JavaScript lädt navbar.html dynamisch -->
+  <script>
+     fetch("../Navbar/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+  
+        // Danach das JS für Navbar laden
+        const script = document.createElement("script");
+        script.src = "../Navbar/nav.js";
+        document.body.appendChild(script);
+      });
+    
+  </script>
+</html>
