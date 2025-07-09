@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,8 +14,80 @@
 <body>
       <!-- Hier wird die Navbar geladen -->
   <div id="navbar-placeholder"></div>
+  <br>
+<style>
 
 
+/* Container – zentriert und begrenzt */
+.container{
+    max-width:1200px;       /* Seitenbreite begrenzen */
+    margin:20px auto;       /* oben/unten 20 px, links/rechts zentriert */
+    padding:0 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+
+/* Überschrift */
+.page-title{
+    text-align:center;
+    color: #8b4b3b;
+    margin:50px;        /* Abstand nach unten */
+    font-size: 30px;
+}
+
+/* Wrapper für alle Tutorial-Karten */
+.tutorials{
+    display:grid;                               /* CSS-Grid aktivieren   */
+    grid-template-columns:repeat(auto-fit, minmax(400px,1fr)); /* … mind. 350 px breit */
+    gap:60px;                                   /* Abstand zwischen Karten */
+}
+
+/*  Karte*/
+.tutorial-item{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(168, 154, 154, 0.1);
+    overflow:hidden;         /* runde Ecken auch fürs Video */
+}
+
+/* Video titel */
+.tutorial-title{
+    background:#e8d6d6;
+    color: #8b4b3b;
+    font-size:1.3rem;
+    text-align:center;
+    margin:0;
+    padding:1rem;
+}
+
+/* Responsive Video 16:9 */
+.video-container{
+    position:relative;
+    padding-bottom:56.25%;   /* 9/16 */
+}
+.video-container iframe{
+    position:absolute;
+    inset:0;                 /* top/right/bottom/left:0 */
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/* Beschreibungstext */
+.tutorial-description{
+    padding:1.2rem;
+    text-align:center;
+    line-height:1.6;
+    color:#555;
+}
+footer 
+  {
+  background-color: #ffffff;
+  padding: 20px 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  }
+</style>
+</head>
 
 <body>
 <div class="container">
@@ -126,7 +198,9 @@
     </div><!-- /.tutorials -->
 </div><!-- /.container -->
 
-
+<footer>
+  &copy; 2025 Laura Anter
+</footer>
          
 <!-- JavaScript lädt navbar.html dynamisch -->
   <script>
@@ -143,8 +217,5 @@
     
   </script>
 </body>
-<footer>
-  &copy; 2025 Laura Anter
-</footer>
 
 </html>

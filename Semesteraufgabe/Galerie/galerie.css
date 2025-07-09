@@ -57,3 +57,11 @@
         #fileInput {
             display: none;
         }
+        
+footer 
+  {
+  background-color: white;
+  padding: 20px 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  }

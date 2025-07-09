@@ -226,3 +226,10 @@
             cursor: pointer;
             margin-top: 20px;
         }
+        footer 
+  {
+  background-color: #ffffff;
+  padding: 20px 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  }

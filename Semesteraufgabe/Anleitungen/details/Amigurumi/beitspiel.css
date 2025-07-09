@@ -228,3 +228,10 @@ input, textarea {
 .hidden { display: none !important; }
 
 button:hover { opacity: 0.8; }
+footer 
+  {
+  background-color: #ffffff;
+  padding: 20px 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  }

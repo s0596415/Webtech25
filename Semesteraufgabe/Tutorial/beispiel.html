@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/*Hauptcontainer*/
+        .container {
+            max-width: 1200px; /*maximale Breite(Video größe)*/
+           margin: 20px; /*Abstand zum rand links*/
+           grid-template-columns: repeat(2, 1fr);
+        }
+
+/* Überschreift*/
+        .page-title {
+            text-align: center; /*Zentriert*/
+            margin-bottom: 60px; /*Abstand nach unten*/
+            color: #8b4513; /*Farbe*/
+            font-size: 40px; /*größe*/
+        }
+
+/* Wrapper für alle Tutorial-Karten */
+.tutorials{
+    display:grid;                               /* CSS-Grid aktivieren   */
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); /* … mind. 350 px breit */
+    gap:2rem;                                   /* Abstand zwischen Karten */
+}
+
+        .tutorial-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          margin-bottom: 30px;
+        }
+
+          .tutorial-title {
+            background: linear-gradient(135deg, #f8f2e4, #ede0d3);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #8b4513;
+            margin: 0;
+        }
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%; /* Das ist das 16:9 Verhältnis (9/16 = 0.5625) */
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+                    
+
+            .tutorial-description {
+                padding: 1.5rem;
+                color: #555;
+                line-height: 1.8;
+                text-align: center;
+                    }
+       
+        /* Desktop/Tablet - nebeneinander */
+        @media (min-width: 769px) {
+            .tutorial-item { width: 48%; display: inline-block; vertical-align: top; margin-right: 2%; }
+            .tutorial-item:nth-child(2) { margin-right: 0; }
+        }
+        
+        /* Handy - untereinander */
+        @media (max-width: 768px) {
+            .page-title { font-size: 28px; }
+            .tutorial-item { width: 100%; display: block; margin-right: 0; }
+        }
+        footer 
+  {
+  background-color: #ffffff;
+  padding: 20px 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  }
+</style>
+</head>
+<body>
+
+ <div class="container">
+        <h2 class="page-title">Häkel-Techniken </h2>
+
+        <div class="tutorial-grid">
+            <div class="tutorial-item">
+                <h3 class="tutorial-title">Magischer Ring</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ar2q4_0wJ6w?si=irj6vEX9PfLp02Q5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="tutorial-description">
+                    Lernen Sie, wie Sie einen magischen Ring häkeln - die perfekte Grundlage für alle Amigurumi-Projekte und zum Häkeln in Runden.
+                </div>
+            </div>
+        </div>
+
+        <div class="tutorial-grid">
+            <div class="tutorial-item">
+                <h3 class="tutorial-title">Farbwechsel</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LYrUua3kLNk?si=x-v0L5A52CVqf6lC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="tutorial-description">
+                    Lernen Sie, wie Sie einen magischen Ring häkeln - die perfekte Grundlage für alle Amigurumi-Projekte und zum Häkeln in Runden.
+                </div>
+            </div>
+        </div>
+
+
+</body>
+<footer>
+    <p> 
+          &copy; 2025 Laura Anter
+    </p>
+</footer>
+</html>
