@@ -80,6 +80,17 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 ### Ansicht beim bearbeiten
 ![Image](https://github.com/user-attachments/assets/1d986cd2-87ba-49e6-84df-05dae5a65f47)
 
+### Galerie
+<img width="1903" height="828" alt="Image" src="https://github.com/user-attachments/assets/530fc634-6db9-44cb-98a1-bbc7826d6d36" />
 
+<img width="1918" height="733" alt="Image" src="https://github.com/user-attachments/assets/b8214b6a-994d-40ef-8158-b76b26aaa600" />
 
+### YouTube Tutorial Ansicht
+<img width="1918" height="911" alt="Image" src="https://github.com/user-attachments/assets/c2934bb4-6ead-4ee6-828e-187b23665253" />
+
+<img width="1903" height="606" alt="Image" src="https://github.com/user-attachments/assets/c10796ed-3447-4bf4-a005-dde3d6bab14a" />
+
+<img width="1907" height="643" alt="Image" src="https://github.com/user-attachments/assets/b8210615-a421-4130-89a1-3fc6f72cf845" />
+
+## Instalation & Nutzung
 
