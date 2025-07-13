@@ -55,7 +55,7 @@
 /* Beschreibungstext */
 .tutorial-description{
     padding:1.2rem;
-    text-align:center;
+    text-align:left;
     line-height:1.6;
     color:#555;
 }
