@@ -46,3 +46,11 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 ## Screenshots
 
 Startseite von FadenZauber
+
+<img width="1903" height="914" alt="Image" src="https://github.com/user-attachments/assets/2a3523ab-ffe3-44a3-a5c3-e8fb7fb70d4e" />
+
+<img width="1901" height="872" alt="Image" src="https://github.com/user-attachments/assets/100b88d8-a710-4e4b-b134-52f80ae032ba" />
+
+<img width="1906" height="662" alt="Image" src="https://github.com/user-attachments/assets/d83c4c54-ba47-4267-89c6-25ae00fca1a9" />
+
+Überschicht der Anleitungen (in Kategorien sortiert)
