@@ -45,7 +45,7 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 
 ## Screenshots
 
-Startseite von FadenZauber
+### Startseite von FadenZauber
 
 <img width="1903" height="914" alt="Image" src="https://github.com/user-attachments/assets/2a3523ab-ffe3-44a3-a5c3-e8fb7fb70d4e" />
 
@@ -60,15 +60,26 @@ Startseite von FadenZauber
 <img width="1918" height="522" alt="Image" src="https://github.com/user-attachments/assets/19af8fcf-28ae-491c-b904-eb1f77126687" />
 
 
-Kategorie- Taschen/Beutel
+### Kategorie- Taschen/Beutel
 <img width="1918" height="900" alt="Image" src="https://github.com/user-attachments/assets/c9205af5-6a9e-4e98-a90b-6d7691f772e6" />
 
 
-Kategorie - Amigurumi
+### Kategorie - Amigurumi
 
 <img width="1918" height="767" alt="Image" src="https://github.com/user-attachments/assets/40b920a3-5683-4bbe-bb4a-70849da58e19" />
 
 <img width="1918" height="448" alt="Image" src="https://github.com/user-attachments/assets/1ce2d3ba-6cc4-483e-80cc-30edda4625f4" />
 
 
-Beispiel Anleitung 
+### Beispiel Anleitung - Mini Biene 
+* Alle Anleitungen sind gleich Aufgebaut
+
+![Image](https://github.com/user-attachments/assets/ebea32f4-8ada-4a69-b024-21c924f6c47d)
+
+### Ansicht beim bearbeiten
+![Image](https://github.com/user-attachments/assets/1d986cd2-87ba-49e6-84df-05dae5a65f47)
+
+
+
+### Maschenzähler
+![Image](https://github.com/user-attachments/assets/0571b8d1-6f01-4e5b-9140-e56981010bfc)
