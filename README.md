@@ -6,24 +6,43 @@ Ob Materiallisten, Rundenübersichten oder persönliche Kommentare zu jedem Proj
 Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihre Projekte mit Herz und Struktur gestalten möchten.
 
 ## Features 
-Individuelle Häkelanleitungen erstellen und bearbeiten
+#### Individuelle Häkelanleitungen erstellen und bearbeiten
 
-Materialien verwalten
+* Materialien verwalten
 
-Runden und Arbeitsschritte anlegen und ändern
+* Runden und Arbeitsschritte anlegen, bearbeiten und löschen
 
-Persönliche Kommentare und Notizen hinterlegen
+* Persönliche Kommentare oder Notizen hinterlegen
 
-Eigene Projekt-Galerie
+#### Eigene Projekt-Galerie
 
-Fotos und Fortschritte speichern
+* Fotos und Fortschritte speichern
 
-Lieblingsprojekte immer im Blick behalten
+* Lieblingsprojekte immer im Blick behalten
 
-YouTube-Tutorials direkt ansehen
+#### YouTube-Tutorials direkt ansehen
 
-Häkelvideos zur Inspiration und zum Lernen
+* Häkelvideos zum Lernen
 
-Benutzerfreundliches Design
+#### Benutzerfreundliches Design
 
-Für Desktop und mobile Geräte optimiert
+* Für Desktop, Tablet und mobile Geräte optimiert
+
+## Inhaltsverzeichnis
+1. Technologien
+2. Screenshots
+3. Instalation & Nutzen
+4. Nutzung/Deployment
+5. KI-Nutzung
+
+
+
+## Technologie
+*  Frontend: Visual Studio Code
+*  Backend: Node.js, Express
+*  Datenbank: MongoDB (Atlas)
+*  CSS-Framework: Bootstrap
+
+## Screenshots
+
+Startseite von FadenZauber
