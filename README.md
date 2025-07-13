@@ -54,3 +54,21 @@ Startseite von FadenZauber
 <img width="1906" height="662" alt="Image" src="https://github.com/user-attachments/assets/d83c4c54-ba47-4267-89c6-25ae00fca1a9" />
 
 Überschicht der Anleitungen (in Kategorien sortiert)
+
+<img width="1913" height="758" alt="Image" src="https://github.com/user-attachments/assets/8d6788eb-a8c4-4ee1-a0d9-464ccffe1067" />
+
+<img width="1918" height="522" alt="Image" src="https://github.com/user-attachments/assets/19af8fcf-28ae-491c-b904-eb1f77126687" />
+
+
+Kategorie- Taschen/Beutel
+<img width="1918" height="900" alt="Image" src="https://github.com/user-attachments/assets/c9205af5-6a9e-4e98-a90b-6d7691f772e6" />
+
+
+Kategorie - Amigurumi
+
+<img width="1918" height="767" alt="Image" src="https://github.com/user-attachments/assets/40b920a3-5683-4bbe-bb4a-70849da58e19" />
+
+<img width="1918" height="448" alt="Image" src="https://github.com/user-attachments/assets/1ce2d3ba-6cc4-483e-80cc-30edda4625f4" />
+
+
+Beispiel Anleitung 
