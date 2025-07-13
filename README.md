@@ -105,9 +105,23 @@ Genutzte Breakpoints:
 
 Dadurch bleibt die Benutzeroberfläche auf allen Geräten intuitiv und übersichtlich.
 
+<img width="756" height="796" alt="Screenshot 2025-07-13 193929" src="https://github.com/user-attachments/assets/3574fdc0-cf6d-46af-888a-c58053f5e1d2" />
+
+
+ Damit die Navigation auch auf Smartphones und Tablets komforttable funktioniert, wird ein sogenanntes Hamburger-Menü verwendet.
+#### Was ist das?
+Das Hamburger-Menü ist ein Menü-Icon mit drei horizontalen Linien, das vor allem auf kleinen Bildschirmen zum Einsatz kommt. Beim Anklicken öffnet sich eine seitliche oder ausklappbare Navigation, über die alle wichtigen Seiten und Funktionen der Webseite erreichbar bleiben.
+
+#### Umsetzung
+* Das Menü wird per CSS und JavaScript realisiert.
+* Mit @media Queries wird das Hamburger-Menü nur bei kleineren Bildschirmgrößen eingeblendet.
+* Beispiel sieh oben
+
+
 ![Bildschirmfoto_13-7-2025_193653_127 0 0 1](https://github.com/user-attachments/assets/3657a731-6672-4d5a-9bbb-e25be8bb80d2)
 
-![Bildschirmfoto_13-7-2025_193752_127 0 0 1](https://github.com/user-attachments/assets/de084e95-61e7-496c-9df1-2775e0b31260)
+
+
 
 ## Instalation & Nutzung
 
