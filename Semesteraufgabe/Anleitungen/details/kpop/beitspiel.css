@@ -1,4 +1,4 @@
-/* === RESET & BASE === */
+/* RESET & BASE */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -8,22 +8,35 @@ body {
     padding: 20px;
 }
 
-h2{
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-/* === LAYOUT === */
+h2 { text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* RESPONSIVE LAYOUT */
 .main-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
-    .main-grid { grid-template-columns: 1fr 1fr; }
+/* Mobile, Tablet, Desktop */
+@media (max-width: 767px) { 
+    body { padding: 10px; }
+    .main-grid { gap: 15px; }
+    .card { padding: 15px; }
+    .counter-number { font-size: 50px; }
 }
 
-/* === CARDS === */
+@media (min-width: 768px) and (max-width: 1023px) { 
+    .counter-number { font-size: 60px; }
+}
+
+@media (min-width: 1024px) { 
+    .main-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    .counter-number { font-size: 70px; }
+}
+
+/* CARDS */
 .card {
     background: white;
     border-radius: 10px;
@@ -32,7 +45,7 @@ h2{
     margin-bottom: 20px;
 }
 
-/* === IMAGES === */
+/* IMAGES */
 .image-container {
     position: relative;
     aspect-ratio: 1;
@@ -40,7 +53,6 @@ h2{
     overflow: hidden;
     margin-bottom: 20px;
 }
-
 .image-container img { width: 100%; height: 100%; object-fit: cover; }
 
 .nav-arrow {
@@ -55,7 +67,6 @@ h2{
     cursor: pointer;
     font-size: 20px;
 }
-
 .nav-arrow.left { left: 10px; }
 .nav-arrow.right { right: 10px; }
 
@@ -69,14 +80,13 @@ h2{
     border-radius: 20px;
 }
 
-/* === YOUTUBE === */
+/* YOUTUBE */
 .youtube-container { display: flex; align-items: center; gap: 10px; }
 .youtube-icon { color: #ef4444; font-size: 20px; }
 .youtube-link { color: #3b82f6; text-decoration: none; }
 
-/* === COUNTER === */
+/* COUNTER */
 .counter-display { text-align: center; margin: 30px 0; }
-
 .counter-number {
     font-size: 70px;
     font-weight: bold;
@@ -100,7 +110,6 @@ h2{
     background: #e5e7eb;
     color: #374151;
 }
-
 .step-btn.active { background: #e91e63; color: white; }
 
 .counter-buttons {
@@ -120,7 +129,6 @@ h2{
     cursor: pointer;
     color: white;
 }
-
 .counter-btn.minus { background: rgb(213, 114, 114); }
 .counter-btn.plus { background: rgb(79, 179, 97); }
 
@@ -135,7 +143,7 @@ h2{
     font-size: 16px;
 }
 
-/* === BUTTONS === */
+/* BUTTONS */
 .btn {
     padding: 8px 16px;
     border: none;
@@ -146,21 +154,17 @@ h2{
     align-items: center;
     gap: 5px;
 }
-
 .btn.blue { background: #37433e; color: white; }
 .btn.green { background: #22c55e; color: white; }
 .btn.gray { background: #6b7280; color: white; }
 .btn.red { background: #ef4444; color: white; }
 
-/* === CONTENT === */
-
+/* CONTENT */
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .material-item {
@@ -169,7 +173,6 @@ h2{
     gap: 10px;
     margin-bottom: 8px;
 }
-
 .material-dot {
     width: 8px;
     height: 8px;
@@ -177,22 +180,32 @@ h2{
     border-radius: 50%;
 }
 
+/* RUNDEN FIX - Das war dein Problem! */
 .round-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Nicht center! */
     gap: 15px;
     padding: 15px;
     margin-bottom: 8px;
     background: #f9fafb;
     border-radius: 8px;
+    width: 100%; /* Volle Breite */
+    text-align: left; /* Links ausrichten */
 }
-
 .round-item.completed {
     background: #f0fdf4;
     border: 1px solid #bbf7d0;
 }
-
-.round-text { font-weight: 500; color: #ec4899; }
+.round-item input[type="checkbox"] {
+    margin: 0;
+    width: auto; /* Nicht 100% */
+}
+.round-text { 
+    font-weight: 500; 
+    color: #ec4899; 
+    text-align: left;
+    flex: 1; /* Nimmt restlichen Platz */
+}
 .round-text.completed { color: #15803d; text-decoration: line-through; }
 
 .comments-box {
@@ -202,7 +215,7 @@ h2{
     border-radius: 0 8px 8px 0;
 }
 
-/* === FORMS === */
+/* FORMS */
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -210,10 +223,8 @@ input, textarea {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
 .edit-row { display: flex; gap: 10px; margin-bottom: 10px; }
 .edit-row input { margin-bottom: 0; }
-
 .add-btn {
     background: #3b82f6;
     color: white;
@@ -223,7 +234,12 @@ input, textarea {
     cursor: pointer;
 }
 
-/* === UTILITIES === */
+/* UTILITIES */
 .hidden { display: none !important; }
-
 button:hover { opacity: 0.8; }
+
+footer {
+    background-color: #ffffff;
+    padding: 20px 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
