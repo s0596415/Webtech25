@@ -125,3 +125,10 @@ Das Hamburger-Menü ist ein Menü-Icon mit drei horizontalen Linien, das vor all
 
 ## Instalation & Nutzung
 
+## Nutzung & Deployment
+
+## Weitere geplante Featurs
+
+## KI-Nutzung
+*perplexity.ai bei fragen zum Backend erstellen und fehlerbehebung 
+* Claude.ai: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js
