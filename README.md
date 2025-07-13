@@ -92,5 +92,21 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 
 <img width="1907" height="643" alt="Image" src="https://github.com/user-attachments/assets/b8210615-a421-4130-89a1-3fc6f72cf845" />
 
+### Responsives Design
+Damit Fadenzauber auf verschiedenen Geräten (Desktop, Tablet, Smartphone) gut aussieht und benutzbar bleibt, wird mit  @media  gearbeitet.
+<img width="432" height="173" alt="image" src="https://github.com/user-attachments/assets/73588001-f36b-48c8-a916-16c8483768f3" />
+
+Über @media (max-width: …) wird gesteuert, dass sich Layout und Elemente der Webseite je nach Bildschirmgröße automatisch anpassen.
+
+Genutzte Breakpoints:
+* max-width: 1200px → für Tablets
+* max-width: 768px → für Smartphones
+
+Dadurch bleibt die Benutzeroberfläche auf allen Geräten intuitiv und übersichtlich.
+
+
+![Image](https://github.com/user-attachments/assets/dcaa6a37-0728-4d63-bb88-706ce69cb5d6)
+
+![Image](https://github.com/user-attachments/assets/e335f409-9f58-4ded-8c1f-361668cb1698)
 ## Instalation & Nutzung
 
