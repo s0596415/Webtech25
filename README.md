@@ -34,6 +34,7 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 3. Instalation & Nutzen
 4. Nutzung/Deployment
 5. KI-Nutzung
+6. Weitere  geplante Featurs
 
 
 
@@ -53,7 +54,7 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 
 <img width="1906" height="662" alt="Image" src="https://github.com/user-attachments/assets/d83c4c54-ba47-4267-89c6-25ae00fca1a9" />
 
-Überschicht der Anleitungen (in Kategorien sortiert)
+### Überschicht der Anleitungen (in Kategorien sortiert)
 
 <img width="1913" height="758" alt="Image" src="https://github.com/user-attachments/assets/8d6788eb-a8c4-4ee1-a0d9-464ccffe1067" />
 
@@ -81,5 +82,4 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 
 
 
-### Maschenzähler
-![Image](https://github.com/user-attachments/assets/0571b8d1-6f01-4e5b-9140-e56981010bfc)
+
