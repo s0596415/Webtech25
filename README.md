@@ -27,6 +27,7 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 #### Benutzerfreundliches Design
 
 * Für Desktop, Tablet und mobile Geräte optimiert
+* Auf WCAG und APCA Kontraste getestet
 
 ## Inhaltsverzeichnis
 1. Technologien
