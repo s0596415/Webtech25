@@ -62,11 +62,11 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 <img width="1918" height="522" alt="Image" src="https://github.com/user-attachments/assets/19af8fcf-28ae-491c-b904-eb1f77126687" />
 
 
-### Kategorie- Taschen/Beutel
+### Beispiel Kategorie- Taschen/Beutel
 <img width="1918" height="900" alt="Image" src="https://github.com/user-attachments/assets/c9205af5-6a9e-4e98-a90b-6d7691f772e6" />
 
 
-### Kategorie - Amigurumi
+### Beispiel Kategorie - Amigurumi
 
 <img width="1918" height="767" alt="Image" src="https://github.com/user-attachments/assets/40b920a3-5683-4bbe-bb4a-70849da58e19" />
 
