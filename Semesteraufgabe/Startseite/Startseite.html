@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"><!--bootstrap  icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--W3 Mobile Navigation Menu-->
     <link rel="stylesheet"  href="Startseite.css" <!--super Wichtig, ohne style link kein style-->
-    <link rel="stylesheet" href="../components/Navbar/nav.css">
+    <link rel="stylesheet" href="../Navbar/nav.css">
    
   
     <title>Startseite</title>
@@ -107,23 +107,24 @@
                 </div>
             </a>
         </div>
-<script>
-
-  fetch("../Navbar/navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar-placeholder").innerHTML = data;
-
-      // JS-Funktionalität nach dem Laden der Navbar aktivieren
-      const script = document.createElement('script');
-      script.src = "../Navbar/nav.js";
-      document.body.appendChild(script);
-    });
-</script>
 
 
  
 </body>
+<!-- JavaScript lädt navbar.html dynamisch -->
+  <script>
+     fetch("../Navbar/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+
+        // Danach das JS für Navbar laden
+        const script = document.createElement("script");
+        script.src = "../Navbar/nav.js";
+        document.body.appendChild(script);
+      });
+    
+  </script>
 <footer>
   &copy; 2025 Laura Anter
 </footer>

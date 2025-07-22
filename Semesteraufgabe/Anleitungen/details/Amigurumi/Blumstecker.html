@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Semesteraufgabe/Navbar/nav.css">
     <link rel="stylesheet" href="beitspiel.css">
-    <link rel="stylesheet" href="/Semesteraufgabe/Anleitungen/details/details.js">
+    <link rel="stylesheet" href="/styles/bootstrap-5.3.6-dist/css/bootstrap-grid.css">
     <title>Anleitung -Biene Blumenstecker</title>
 </head>
 <body>
@@ -121,8 +121,9 @@
 <script>
   const ANLEITUNG_ID = "6872a1aa631ec9587d2401cf";
 </script>
+<script src="/Semesteraufgabe/Anleitungen/details/details.js"></script>
 <script src="/Semesteraufgabe/app.js"></script>
-<script src="beispiel.js"></script>
+
 <script>
 fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
   .then(r => r.text())
@@ -157,6 +158,35 @@ function nextImage() {
 function prevImage() {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     updateImage();
+}
+
+//COUNTER FUNKTIONEN //
+let counter = 0;
+step = 1;
+
+function updateCounter() {
+    document.getElementById('counter-number').textContent = counter;
+}
+
+function setStep(newStep) {
+    step = newStep;
+    document.querySelectorAll('.step-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[onclick="setStep(${newStep})"]`).classList.add('active');
+}
+
+function increaseCounter() {
+    counter += step;
+    updateCounter();
+}
+
+function decreaseCounter() {
+    counter = Math.max(0, counter - step);
+    updateCounter();
+}
+
+function resetCounter() {
+    counter = 0;
+    updateCounter();
 }
 </script>
  

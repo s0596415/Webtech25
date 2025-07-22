@@ -1,608 +1,177 @@
+/*Setzt Standardwerte für alle Elemente zurück, damit überall das gleiche Verhalten herrscht */
 * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  box-sizing: border-box; /* Padding und Border werden in die Gesamtgröße eines Elements einbezogen */
+  margin: 0;              /* Entfernt Außenabstand (Margin) */
+  padding: 0;             /* Entfernt Innenabstand (Padding) */
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Standard-Schriftart */
+  background-color: #f8f9fa; /* Helles, leicht graues Hintergrund für ein sanftes Layout */
+}
+
+
+/*Hauptcontainer für  Kategorienübersicht  */
+
+.kategorien-section {
+    padding: 60px 20px 40px 20px; /* Innenabstand */
+    max-width: 1200px;            /* Maximale Breite des Containers – begrenzt auf große Bildschirme */
+    margin: 0 auto;               /* Zentriert den Container horizontal */
+}
+
+
+/*  Überschrift im Kategorienbereich  */
+
+.kategorien-titel {
+    color: #8b4b3b;       /* Farbe: Beliebte Kategorien */
+    font-size: 40px;        /* Schriftgröße  */
+    margin-bottom: 40px;    /* Abstand zur Kategorie darunter(Außenabstand) */
+    text-align: center;     /* Zentriert den Text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Einheitliche Schriftart */
+    font-weight: 600;       /*Text fette für Sichtbarkeit */
+}
+
+
+/*  Grid-Layout für alle Kategorien-Kacheln */
+
+.wrapper {
+    display: grid;                            /* Raster-Layout */
+    grid-template-columns: repeat(4, 1fr);    /* 4 gleich große Spalten */
+    gap: 20px;                                /* Abstand zwischen Grid*/
+}
+
+/* Einzelne Kategorie-Grid */
+.Kategorien {
+    display: flex;                    /* Flexbox für vertikale Ausrichtung */
+    flex-direction: column;           /* Inhalte von oben nach unten */
+    background: white;              /* Weißer Hintergrund */
+    box-shadow: rgba(231, 232, 234, 0.2) 0px 8px 24px; /* Sanfter Schatten für Tiefe */
+    text-decoration: none;            /* Entfernt Link-Unterstreichung */
+    color: #5D3636;                 /* Kategorie(Anhänger) – Textfarbe */
+    border-radius: 8px;               /* Abgerundete Ecken */
+    overflow: hidden;                 /* Überschüssiger Inhalt wird abgeschnitten ( wenn weg nicht mehr abgerundet)*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation beim Hover */
+    height: 350px;                    /* Feste Höhe Grid */
+}
+
+/* Hovereffekt – Grid hebt sich leicht ab */
+.Kategorien:hover {
+    transform: translateY(-5px);                                /* Bewegt die Box leicht nach oben */
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;     
+}
+
+
+/* Titelbereich  */
+
+.häkelname {
+    text-align: center;
+    padding: 15px;                          /* Innenabstand um den Text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 660;                       /* Extra-fett  */
+    font-size: 23px;
+    background: #F6EAEA;                  /* Helles Pastellrosa – trennt optisch den Kopfbereich ab */
+    border-bottom: 1px solid #f1eded;     /* Dünne Linie trennt Titel von Bild */
+    margin: 0;                              /* Kein zusätzlicher Abstand – Zentrierung bleibt erhalten */
+    min-height: 60px;                       /* Mindesthöhe für Einheitlichkeit */
+    display: flex;
+    align-items: center;                    /* Vertikale Zentrierung */
+    justify-content: center;                /* Horizontale Zentrierung */
+}
+
+
+/* Absatz im Titelbereich (z. B. <p>Tag) */
+
+.häkelname p {
+    margin: 0;  /* Kein zusätzlicher Abstand – Zentrierung bleibt erhalten */
+}
+
+
+/*Bildbereich innerhalb der Kachel*/
+
+.häkelimage {
+    flex: 1;                                /* Nimmt den restlichen verfügbaren Platz ein */
+    display: flex;
+    align-items: center;                    /* Vertikale Zentrierung */
+    justify-content: center;                /* Horizontale Zentrierung */  
+    padding: 15px;
+    background: white;                    /* Gleicher weißer Hintergrund wie die Box */
+}
+
+
+/* Bild innerhalb der Kategorie */
+
+.häkelimage img {
+    width: 100%;                          /* Bild füllt die gesamte Breite */
+    height: 250px;                        /* Fixierte Bildhöhe für Gleichmäßigkeit */
+    object-fit: cover;                    /* Bild wird skaliert und beschnitten, ohne Verzerrung */
+    border-radius: 4px;                   /* Leichte Rundung der Bildkanten */
+}
+
+ footer 
+      {
       background-color: #f8f9fa;
-    }
-
-    header {
-      width: 100%;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    
-        /* Top-Bar mit Logo und Suchfeld für Desktop */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background: white;
-      border-bottom: none;
-    
-    }
-
-
-    .logo-section {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-
-    .logo-text {
-      font-size: 32px;
-      font-weight: bold;
-      color: rgb(131, 39, 39);
-    }
-.container {
-    display: flex; /*bei genügend platz textfeld und button nebeneinander*/
-    align-items: center;
-    justify-content: left;
-   
-}
-.search-box{
-  display: flex;
-  background-color: white;
-  border: 2px;
-  border-radius: 9999px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 0 10px ;
-  max-width: 400px;
-  width: 100%;
-  margin-left:auto;
-  
-}
-
-
-
-.search-input{
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 8px;
-  font-size: 16px;
-  background-color: transparent;
-}
-
-.search-button{
-  display: flex;
-  align-items: center;
-  gap:6px;
-  background-color: rgb(207, 121, 121);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 14px;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.search-button:hover{
-  background-color: brown;
-}
-
-.bi bi-search-heart{
-  width: 16px;
-  height: 16px;
-}
-    
-    .top-bar-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      color: #666;
-    }
-
-
-    /* Navigation Wrapper - Vollständige Navigation für Desktop */
-    .nav-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 20px;
-      background-color: rgb(207, 121, 121);
-      gap: 40px;
-      width: 100%;
-      
-    }
-
-    .navbar {
-      list-style: none;
-      display: flex;
-      gap: 40px;
-      margin: 0;
-    }
-
-    .navbar li a {
-      font-size: 20px;
-      font-weight: 500;
-      color: white;
-      text-decoration: none;
-      transition:all all 0.3s ease;
-      padding: 8px 16px;
-      border-radius: 20px;
-      position: relative;
-    }
-
-    .navbar li a:hover {
-      background: rgb(255, 255,255,0.2);
-      transform: translateY(-1px);
-    }
-
-    /* Hamburger Menu - versteckt bei Desktop */
-    .hamburger {
-      cursor: pointer;
-      font-size: 24px;
-      color: white;
-    }
-
-    .hamburger-label {
-      font-size: 12px;
-      color: white;
-      margin-top: 4px;
-    }
-
-    
-    
-/* Mobile Navigation  */
-    .mobile-nav {
-      display: none;
-      background: white;
-      border-bottom: 1px solid #eee;
-      padding: 12px;
-    }
-
-    .mobile-nav-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 48px;
-    }
-
-    .slide-nav-toggle {
-      background: white;
-      border: none;
-      padding: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      gap: 2px;
-      height: 48px;
-      min-width: 48px;
-
-    }
-
-    .slide-nav-toggle i {
-      font-size: 18px;
-      color: brown;
-    }
-
-    .slide-nav-toggle span {
-      font-size: 10px;
-      font-weight: bold;
-      color: brown;
-    }
-
-    /* Slide Menu Overlay */
-    .slide-menu-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      display: none;
-    }
-
-    .slide-menu-overlay.show {
-      display: block;
-    }
-
-    /* Slide Menu */
-    .slide-menu {
-      position: fixed;
-      top: 0;
-      left: -300px;
-      width: 300px;
-      height: 100%;
-      background: white;
-      z-index: 1000;
-      transition: left 0.3s ease;
-      overflow-y: auto;
-      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .slide-menu.show {
-      left: 0;
-    }
-
-    /* Slide Menu Header */
-    .slide-menu-header {
-      padding: 20px;
-      background: #f8f9fa;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .slide-menu-close {
-      background: none;
-      border: none;
-      font-size: 20px;
-      color: #666;
-      cursor: pointer;
-    }
-
-    /* Slide Menu Buttons */
-    .slide-menu-buttons {
-      padding: 20px;
-      border-bottom: 1px solid #eee;
-    }
-
-    .slide-menu-button {
-      margin-bottom: 10px;
-    }
-
-    .slide-menu-button:last-child {
-      margin-bottom: 0;
-    }
-
-    .btn-slide {
-      display: block;
-      width: 100%;
-      padding: 12px 20px;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary-slide {
-      background: rgb(207, 121, 121);
-      color: white;
-      border: 2px solid rgb(207, 121, 121);
-    }
-
-    .btn-primary-slide:hover {
-      background: rgb(207, 121, 121);
-      border-color: rgb(207, 121, 121);
-    }
-
-    .btn-secondary-slide {
-      background: white;
-      color: rgb(207, 121, 121);
-      border: 2px solid rgb(207, 121, 121);
-    }
-
-    .btn-secondary-slide:hover {
-      background: #f0fdff;
-    }
-
-    /* Slide Menu Navigation */
-    .slide-menu-navigation {
-      padding: 0;
-    }
-
-    .slide-menu-nav {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .slide-menu-nav li {
-      border-bottom: 1px solid #eee;
-    }
-
-    .slide-menu-nav li:last-child {
-      border-bottom: none;
-    }
-
-    .slide-menu-nav a {
-      display: block;
-      padding: 15px 20px;
-      color: #333;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .slide-menu-nav a:hover {
-      background: #f8f9fa;
-      color: rgb(207, 121, 121);
-    }
-
-    /* Mobile Search in Navigation */
-    .mobile-nav-search {
-      flex: 1;
-      margin: 0 15px;
-    }
-    
-    
-    /* Main Content */
-    .main-content {
-      padding: 40px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-      min-height: 60vh;
-    }
-
-   
-
-    /* Animations */
-    @keyframes gentle-bounce {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-5px); }
-    }
-
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-/* Mobile Responsive */
-    @media (max-width: 900px) {
-      .nav-wrapper {
-        display: none;
+      padding: 20px 100px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;  /* Zentriert den Text */
       }
-
-      .mobile-nav {
-        display: block;
-      }
-
-      .top-bar {
-        padding: 15px 20px;
-      }
-
-      .search-box {
-        max-width: 300px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 15px;
-      }
-
-      .search-box {
-        max-width: 100%;
-        order: 2;
-      }
-
-      .top-bar-right {
-        order: 1;
-      }
-
-      .logo-text {
-        font-size: 24px;
-      }
-
-      .yarn-icon {
-        width: 35px;
-        height: 35px;
-      }
-
-      .search-input {
-        padding: 10px 15px;
-        font-size: 14px;
-      }
-
-      .search-button {
-        padding: 10px 15px;
-      }
-
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-
-      .main-content {
-        padding: 20px 15px;
-      }
-
-      .breadcrumb {
-        padding: 10px 15px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .top-bar {
-        padding: 10px;
-      }
-
-      .logo-text {
-        font-size: 20px;
-      }
-
-      .yarn-icon {
-        width: 30px;
-        height: 30px;
-      }
-
-      .hero-title {
-        font-size: 1.5rem;
-      }
-    }
-
-    /* Desktop Layout */
-    @media (min-width: 1024px) {
-      .top-bar, .nav-wrapper {
-        padding-left: 40px;
-        padding-right: 40px;
-      }
-
-      .breadcrumb {
-        padding: 20px 40px;
-      }
-
-      .main-content {
-        padding: 60px 40px;
-      }
-
-      .hero-title {
-        font-size: 4rem;
-      }
-
-      .search-box {
-        max-width: 500px;
-      }
-    }
-
-
-
-      /* Hauptcontainer für Kategorien */
-        .kategorien-section {
-            padding: 60px 20px 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .kategorien-titel {
-            color: #8b4b3b;
-            font-size: 40px;
-            margin-bottom: 40px;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 600;
-        }
-
-        .wrapper {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .Kategorien {
-            border: 1px solid #F6EAEA;
-            display: flex;
-            flex-direction: column;
-            box-shadow: rgba(231, 232, 234, 0.2) 0px 8px 24px;
-            text-decoration: none;
-            color: #5D3636;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: white;
-            height: 350px; /* Feste Höhe für alle Kästen */
-        }
-
-        .Kategorien:hover {
-            transform: translateY(-5px);
-            box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
-        }
-
-        .häkelname {
-            text-align: center;
-            padding: 15px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 660;
-            font-size: 23px;
-            background: #F6EAEA;
-            border-bottom: 1px solid #f1eded;
-            margin: 0;
-            min-height: 60px; /* Mindesthöhe für Titel */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .häkelname p {
-            margin: 0;
-        }
-
-        .häkelimage {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            background: white;
-        }
-
-        .häkelimage img {
-            width: 100%;
-            height: 250px; /* Größere Bilder */
-            object-fit: cover;
-            border-radius: 4px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .wrapper {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
-            }
             
-            .Kategorien {
-                height: 400px; /* Etwas höher auf Tablet */
-            }
-            
-            .häkelimage img {
-                height: 300px; /* Größere Bilder auf Tablet */
-            }
-            
-            .häkelname {
-                font-size: 1.4rem; /* Größere Schrift */
-            }
-        }
 
-        @media (max-width: 768px) {
-            .wrapper {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+            /* Responsive Design */
+            @media (max-width: 1024px) {
+                .wrapper {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 25px;
+                }
+                
+                .Kategorien {
+                    height: 400px; /* Etwas höher auf Tablet */
+                }
+                
+                .häkelimage img {
+                    height: 300px; /* Größere Bilder auf Tablet */
+                }
+                
+                .häkelname {
+                    font-size: 1.4rem; /* Größere Schrift */
+                }
             }
-            
-            .kategorien-titel {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                .wrapper {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+                
+                .kategorien-titel {
+                    font-size: 1.8rem;
+                    margin-bottom: 30px;
+                }
+                
+                .kategorien-section {
+                    padding: 40px 15px 30px 15px;
+                }
             }
-            
-            .kategorien-section {
-                padding: 40px 15px 30px 15px;
-            }
-        }
 
         @media (max-width: 480px) {
-            .wrapper {
-                grid-template-columns: 1fr;
-                gap: 25px;
+              .wrapper {
+                        grid-template-columns: 1fr;
+                        gap: 25px;
+                      }
+                
+                .Kategorien {
+                    height: 350px;
+                }
+                
+                .kategorien-titel {
+                    font-size: 1.5rem;
+                    margin-bottom: 25px;
+                }
+                
+                .häkelimage img {
+                    height: 250px;
+                }
             }
-            
-            .Kategorien {
-                height: 350px;
-            }
-            
-            .kategorien-titel {
-                font-size: 1.5rem;
-                margin-bottom: 25px;
-            }
-            
-            .häkelimage img {
-                height: 250px;
-            }
-        }
-footer 
-  {
-  background-color: #f8f9fa;
-  padding: 20px 100px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  }
+
         
-    
+            
         
-    
