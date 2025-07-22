@@ -1,0 +1,9 @@
+# Verstecke Umgebungsvariablen
+.env
+
+# Node-Module ignorieren
+node_modules/
+
+# Optional: Log-Dateien ignorieren
+*.log
+
