@@ -45,7 +45,7 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 ## Screenshots
 
 ### Startseite von FadenZauber
-Die St
+
 <img width="1903" height="914" alt="Image" src="https://github.com/user-attachments/assets/2a3523ab-ffe3-44a3-a5c3-e8fb7fb70d4e" />
 
 <img width="1901" height="872" alt="Image" src="https://github.com/user-attachments/assets/100b88d8-a710-4e4b-b134-52f80ae032ba" />
@@ -167,13 +167,13 @@ cd Webtech25/Semesteraufgabe
 code .
 ```
 
-## KI-Nutzung und Hilfmittel
+## KI-Nutzung und Youtube Videos 
 YouTube Videos
 *  beim erstellen von der Auto-Complete Search Bar hat mir das [Video](https://youtu.be/pdyFf1ugVfk?si=YfBgcLp-T_Mnf4wM) sehr geholfen
-*  beim einbetten von den Yt Videos hat mir dieses [Video](https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)sehr geholfen
+*  beim einbetten von den Yt Videos hat mir dieses [Video](https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)weiter geholfen
 *  zum erstellen der Readme kann ich dieses [Video](https://youtu.be/EN6d6djVIJI?si=Xy3bcAzNw3VKzGya) empfehlen
 * **perplexity.ai**: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
-* **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js
+* **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum Js
 
 
 
@@ -181,3 +181,4 @@ YouTube Videos
 
 * Es soll möglich werden eigene Anleitungen zu erstellen und diese dann zu bearbeiten
 * Bilder hinzufügen Button in der Galerie
+* anmelde Option zum individuellen Bearbeiten/erstellen der Anleitungen 
