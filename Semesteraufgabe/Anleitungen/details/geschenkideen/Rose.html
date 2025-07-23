@@ -97,11 +97,7 @@
                 <textarea id="comments-edit" class="hidden" rows="3" placeholder="Kommentare und Notizen..."></textarea>
             </div>
 
-            <!-- YouTube Edit -->
-            <div id="youtube-edit-section" class="hidden">
-                <h3>YouTube Link:</h3>
-                <input type="url" id="youtube-edit" placeholder="https://youtube.com/watch?v=...">
-            </div>
+            
         </div>
     </div>
        
@@ -122,8 +118,12 @@ fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
     const s = document.createElement("script");
     s.src = "../../../Navbar/nav.js";
     document.body.appendChild(s)
+// autocomplete.js nachladen
+      const autocompleteScript = document.createElement("script");
+      autocompleteScript.src = "/Semesteraufgabe/Navbar/autocomplete.js";
+      document.body.appendChild(autocompleteScript);
+    });
 
-  });
   // BILD NAVIGATION
 const images = [
     "/Semesteraufgabe/images/Webtech-Häkeln/Rose-Hand.jpg",

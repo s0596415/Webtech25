@@ -89,16 +89,20 @@
 
   <!-- JavaScript lädt navbar.html dynamisch -->
   <script>
-     fetch("../Navbar/navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("navbar-placeholder").innerHTML = data;
+    fetch("/Semesteraufgabe/Navbar/navbar.html")      //  ../  = eine Ebene höher
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("navbar-placeholder").innerHTML = html;
 
-        // Danach das JS für Navbar laden
-        const script = document.createElement("script");
-        script.src = "../Navbar/nav.js";
-        document.body.appendChild(script);
-      });
+    /* dazugehöriges Script nachladen */
+    const s = document.createElement("script");
+    s.src = "/Semesteraufgabe/Navbar/nav.js";
+    document.body.appendChild(s)
+// autocomplete.js nachladen
+      const autocompleteScript = document.createElement("script");
+      autocompleteScript.src = "/Semesteraufgabe/Navbar/autocomplete.js";
+      document.body.appendChild(autocompleteScript);
+    });
     
   </script>
 <footer>

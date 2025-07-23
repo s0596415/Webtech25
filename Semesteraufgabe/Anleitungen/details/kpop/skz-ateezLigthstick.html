@@ -33,7 +33,7 @@
                 <div class="youtube-container">
                     <span class="youtube-icon">▶</span>
                     <strong>YouTube Tutorial:</strong>
-                    <a href="https://www.youtube.com/watch?v=MaRl8ucJjos" class="youtube-link" target="_blank">
+                    <a href="https://youtu.be/5S0w9YMe4Vo?si=eGCyjsM7Uqk-JkL_" class="youtube-link" target="_blank">
                         Video ansehen ↗
                     </a>
                 </div>
@@ -97,16 +97,17 @@
                 <textarea id="comments-edit" class="hidden" rows="3" placeholder="Kommentare und Notizen..."></textarea>
             </div>
 
-            <!-- YouTube Edit -->
-            <div id="youtube-edit-section" class="hidden">
-                <h3>YouTube Link:</h3>
-                <input type="url" id="youtube-edit" placeholder="https://youtube.com/watch?v=...">
-            </div>
+          
         </div>
     </div>
        
  
 </body>
+<script>
+  const ANLEITUNG_ID = "6880d0fd16003c302f265b08";
+</script>
+<script src="/Semesteraufgabe/app.js"></script>
+<script src="/Semesteraufgabe/Anleitungen/details/details.js"></script>
 <script src="beispiel.js"></script>
 <script>
 fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
@@ -118,8 +119,13 @@ fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
     const s = document.createElement("script");
     s.src = "../../../Navbar/nav.js";
     document.body.appendChild(s)
+// autocomplete.js nachladen
+      const autocompleteScript = document.createElement("script");
+      autocompleteScript.src = "/Semesteraufgabe/Navbar/autocomplete.js";
+      document.body.appendChild(autocompleteScript);
+    });
+    
 
-  });
   // BILD NAVIGATION
 const images = [
     "/Semesteraufgabe/images/Webtech-Häkeln/Ligthstick-vorne.jpg",

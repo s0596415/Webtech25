@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Semesteraufgabe/Navbar/nav.css">
     <link rel="stylesheet" href="beitspiel.css">
-    <link rel="stylesheet" href="/Semesteraufgabe/Anleitungen/details/details.js">
+ 
     <title>Anleitung -Rose</title>
 </head>
 <body>
@@ -97,11 +97,7 @@
                 <textarea id="comments-edit" class="hidden" rows="3" placeholder="Kommentare und Notizen..."></textarea>
             </div>
 
-            <!-- YouTube Edit -->
-            <div id="youtube-edit-section" class="hidden">
-                <h3>YouTube Link:</h3>
-                <input type="url" id="youtube-edit" placeholder="https://youtube.com/watch?v=...">
-            </div>
+           
         </div>
     </div>
        
@@ -112,6 +108,7 @@
 </script>
 <script src="/Semesteraufgabe/app.js"></script>
 <script src="beispiel.js"></script>
+<script src="/Semesteraufgabe/Anleitungen/details/details.js"></script>
 <script>
 fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
   .then(r => r.text())
@@ -122,8 +119,12 @@ fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
     const s = document.createElement("script");
     s.src = "../../../Navbar/nav.js";
     document.body.appendChild(s)
+// autocomplete.js nachladen
+      const autocompleteScript = document.createElement("script");
+      autocompleteScript.src = "/Semesteraufgabe/Navbar/autocomplete.js";
+      document.body.appendChild(autocompleteScript);
+    });
 
-  });
   // BILD NAVIGATION
 const images = [
     "/Semesteraufgabe/images/Häkeln2/Rose.jpg",

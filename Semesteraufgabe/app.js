@@ -144,7 +144,7 @@ function startEditing() {
     document.getElementById('rounds-edit').classList.remove('hidden');
     document.getElementById('comments-display').classList.add('hidden');
     document.getElementById('comments-edit').classList.remove('hidden');
-    document.getElementById('youtube-edit-section').classList.remove('hidden');
+   
     
     renderMaterialsEdit();
     renderRoundsEdit();
@@ -154,7 +154,7 @@ function startEditing() {
 
 async function saveChanges() {
     editData.kommentare = document.getElementById('comments-edit').value;
-    editData.youtubeLink = document.getElementById('youtube-edit').value;
+    
 
     const id = AppState.anleitung._id || (aktuelleAnleitung && aktuelleAnleitung._id);
     if (!id) {
@@ -191,7 +191,7 @@ function cancelEditing() {
     document.getElementById('rounds-edit').classList.add('hidden');
     document.getElementById('comments-display').classList.remove('hidden');
     document.getElementById('comments-edit').classList.add('hidden');
-    document.getElementById('youtube-edit-section').classList.add('hidden');
+   
 }
 
 // === Edit Functions ===
@@ -199,7 +199,7 @@ function updateMaterial(index, value) {
     editData.materialien[index] = value;
 }
 function addMaterial() {
-    editData.materialien.push("Neues Material");
+    editData.materialien.push("");
     renderMaterialsEdit();
 }
 function removeMaterial(index) {

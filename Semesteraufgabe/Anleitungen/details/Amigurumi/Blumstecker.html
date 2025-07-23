@@ -107,11 +107,7 @@
                     <textarea id="comments-edit" class="hidden" rows="3" placeholder="Kommentare und Notizen..."></textarea>
                 </div>
 
-                <!-- YouTube Edit -->
-                <div id="youtube-edit-section" class="hidden" style="margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 15px;">YouTube Link:</h3>
-                    <input type="url" id="youtube-edit" placeholder="https://youtube.com/watch?v=...">
-                </div>
+               
         </div>
         </div>
     </div>
@@ -123,6 +119,7 @@
 </script>
 <script src="/Semesteraufgabe/Anleitungen/details/details.js"></script>
 <script src="/Semesteraufgabe/app.js"></script>
+<script src="beispiel.js"></script>
 
 <script>
 fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
@@ -135,7 +132,11 @@ fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
     s.src = "../../../Navbar/nav.js";
     document.body.appendChild(s)
 
-  });
+   // autocomplete.js nachladen
+      const autocompleteScript = document.createElement("script");
+      autocompleteScript.src = "/Semesteraufgabe/Navbar/autocomplete.js";
+      document.body.appendChild(autocompleteScript);
+});
   
 // BILD NAVIGATION
 const images = [
