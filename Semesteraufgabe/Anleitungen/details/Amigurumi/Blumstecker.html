@@ -128,7 +128,7 @@
 fetch("../../../Navbar/navbar.html")      //  ../  = eine Ebene höher
   .then(r => r.text())
   .then(html => {
-    document.getElementById("navbar-placeholder").innerHTML = html;
+    document.getElementById("navbar-placeholder").innerHTML= html;
 
     /* dazugehöriges Script nachladen */
     const s = document.createElement("script");

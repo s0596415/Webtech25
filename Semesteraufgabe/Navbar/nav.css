@@ -299,6 +299,21 @@ header {
     color: #666;
 }
 
+.result-box ul{
+        border-top: 1px solid #8b4b3b;
+        padding: 15px 10px;
+}
+
+.result-box ul li{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: none;
+}
+
+.result-box ul li:hover{
+    background-color: #8b4b3b;
+}
 /* ===================================
    RESPONSIVE DESIGN - MEDIA QUERIES
    =================================== */
@@ -378,6 +393,7 @@ header {
         padding: 10px 15px;
     }
 }
+
 
 /* Mobile Small (bis 480px) */
 @media (max-width: 480px) {
