@@ -133,7 +133,32 @@ Stelle sicher, dass folgende Software installiert ist:
 ### 1. Projekt clonen
 ```Bash
 git clone https://github.com/s0596415/Webtech25.git
+cd Webtech25
 ```
+### 2. Backend einrichten
+
+#### 1. Abhängigkeiten instalieren
+```Bash
+npm install
+```
+#### 2. Umgebungsvariable einrichten
+Erstelle im Ordner backend eine Datei namens .env  mit folgendem Inhalt:
+**Bitte trage deine Werte von MongoDB ein**
+```Bash
+MONGO_URI=<deine eigene MongoDB-Verbindungs-URL>
+JWT_SECRET=<dein eigenes geheimes JWT-Passwort>
+PORT=3000
+```
+#### 3. Backend starten
+Wenn du noch nicht in backend bist, wechsel bitte in den Ordner
+```Bash
+cd Backend
+```
+nun starten wir den Server
+```Bash
+node server.js
+```
+
 
 ## KI-Nutzung und Hilfmittel
 YouTube Videos
