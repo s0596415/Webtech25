@@ -30,12 +30,12 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 * Auf WCAG und APCA Kontraste getestet
 
 ## Inhaltsverzeichnis
-1. [Technologien](Technologie)
-2. [Screenshots](Screenshots)
-3. [Instalation & Nutzen](Instalation&Nutzen)
-4. [Nutzung/Deployment]
-5. [KI-Nutzung und YouTube Videos]
-6. [Weitere  geplante Featurs]
+1. [Technologien](#technologien)
+2. Screenshots
+3. Instalation & Nutzen
+4. Nutzung/Deployment
+5. KI-Nutzung und YouTube Videos
+6. Weitere  geplante Featurs
 
 
 
@@ -135,5 +135,5 @@ YouTube Videos
 *  beim erstellen von der Auto-Complete Search Bar hat mir das [Video](https://youtu.be/pdyFf1ugVfk?si=YfBgcLp-T_Mnf4wM) sehr geholfen
 *  beim einbetten von den Yt Videos hat mir dieses [Video](https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)sehr geholfen
 *  zum erstellen der Readme kann ich dieses [Video](https://youtu.be/EN6d6djVIJI?si=Xy3bcAzNw3VKzGya) empfehlen
-* perplexity.ai: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
-* Claude.ai: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js 
+* **perplexity.ai**: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
+* **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js 
