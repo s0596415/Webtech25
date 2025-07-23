@@ -134,7 +134,7 @@ Stelle sicher, dass folgende Software installiert ist:
 * Git
 * MongoDB (lokal oder über Atlas)
 
-1. Projekt clonen
+### 1. Projekt clonen
 
 
 ## KI-Nutzung und Hilfmittel
