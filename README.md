@@ -132,8 +132,8 @@ Das Hamburger-Menü ist ein Menü-Icon mit drei horizontalen Linien, das vor all
 
 ## KI-Nutzung und Hilfmittel
 YouTube Videos
-*  beim erstellen von der Auto-Complete Search Bar hat mir das [Video] sehr geholfen (https://youtu.be/pdyFf1ugVfk?si=YfBgcLp-T_Mnf4wM)
-*  beim einbetten von den Yt Videos hat mir dieses [Video] sehr geholfen (https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)
-*  zum erstellen der Readme kann ich dieses Video empfehlen
+*  beim erstellen von der Auto-Complete Search Bar hat mir das [Video](https://youtu.be/pdyFf1ugVfk?si=YfBgcLp-T_Mnf4wM) sehr geholfen
+*  beim einbetten von den Yt Videos hat mir dieses [Video](https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)sehr geholfen
+*  zum erstellen der Readme kann ich dieses [Video](https://youtu.be/EN6d6djVIJI?si=Xy3bcAzNw3VKzGya) empfehlen
 * perplexity.ai: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
 * Claude.ai: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js 
