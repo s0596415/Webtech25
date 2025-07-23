@@ -131,9 +131,9 @@ Stelle sicher, dass folgende Software installiert ist:
 * MongoDB (lokal oder über Atlas)
 
 ### 1. Projekt clonen
-Bash
+```Bash
 git clone https://github.com/s0596415/Webtech25.git
-
+```
 
 ## KI-Nutzung und Hilfmittel
 YouTube Videos
