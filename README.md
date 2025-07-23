@@ -6,7 +6,7 @@ Ob Materiallisten, Rundenübersichten oder persönliche Kommentare zu jedem Proj
 Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihre Projekte mit Herz und Struktur gestalten möchten.
 
 ## Features 
-#### Individuelle Häkelanleitungen erstellen und bearbeiten
+#### Individuelle Häkelanleitungen verwalten
 
 * Materialien verwalten
 
@@ -15,8 +15,6 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 * Persönliche Kommentare oder Notizen hinterlegen
 
 #### Eigene Projekt-Galerie
-
-* Fotos und Fortschritte speichern
 
 * Lieblingsprojekte immer im Blick behalten
 
@@ -33,22 +31,21 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 1. Technologien
 2. Screenshots
 3. Instalation & Nutzen
-4. Nutzung/Deployment
-5. KI-Nutzung
+5. KI-Nutzung und YouTube Videos
 6. Weitere  geplante Featurs
 
 
 
 ## Technologie
-*  Frontend: Visual Studio Code
-*  Backend: Node.js, Express
-*  Datenbank: MongoDB (Atlas)
-*  CSS-Framework: Bootstrap
+*  **Frontend:** Visual Studio Code
+*  **Backend:** Node.js, Express
+*  **Datenbank:** MongoDB (Atlas)
+*  **CSS-Framework:** Bootstrap
 
 ## Screenshots
 
 ### Startseite von FadenZauber
-
+Die St
 <img width="1903" height="914" alt="Image" src="https://github.com/user-attachments/assets/2a3523ab-ffe3-44a3-a5c3-e8fb7fb70d4e" />
 
 <img width="1901" height="872" alt="Image" src="https://github.com/user-attachments/assets/100b88d8-a710-4e4b-b134-52f80ae032ba" />
@@ -126,10 +123,61 @@ Das Hamburger-Menü ist ein Menü-Icon mit drei horizontalen Linien, das vor all
 
 ## Instalation & Nutzung
 
-## Nutzung & Deployment
+### Voraussetzungen
+Stelle sicher, dass folgende Software installiert ist:
+* Node.js
+* Git
+* MongoDB (lokal oder über Atlas)
+
+### 1. Projekt clonen
+```Bash
+git clone https://github.com/s0596415/Webtech25.git
+cd Webtech25
+```
+### 2. Backend einrichten
+
+#### 1. Abhängigkeiten instalieren
+```Bash
+npm install
+```
+#### 2. Umgebungsvariable einrichten
+Erstelle im Ordner backend eine Datei namens .env  mit folgendem Inhalt:
+**Bitte trage deine Werte von MongoDB ein**
+```Bash
+MONGO_URI=<deine eigene MongoDB-Verbindungs-URL>
+JWT_SECRET=<dein eigenes geheimes JWT-Passwort>
+PORT=3000
+```
+#### 3. Backend starten
+Wenn du noch nicht in backend bist, wechsel bitte in den Ordner
+```Bash
+cd Backend
+```
+nun starten wir den Server
+```Bash
+node server.js
+```
+### 4. Frondend starten
+#### 1. wechsel in den Ordner Semesteraufgabe (frontend)
+```Bash
+cd Webtech25/Semesteraufgabe
+```
+#### 2. frontend starten
+```Bash
+code .
+```
+
+## KI-Nutzung und Hilfmittel
+YouTube Videos
+*  beim erstellen von der Auto-Complete Search Bar hat mir das [Video](https://youtu.be/pdyFf1ugVfk?si=YfBgcLp-T_Mnf4wM) sehr geholfen
+*  beim einbetten von den Yt Videos hat mir dieses [Video](https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)sehr geholfen
+*  zum erstellen der Readme kann ich dieses [Video](https://youtu.be/EN6d6djVIJI?si=Xy3bcAzNw3VKzGya) empfehlen
+* **perplexity.ai**: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
+* **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js
+
+
 
 ## Weitere geplante Featurs
 
-## KI-Nutzung
-* perplexity.ai bei fragen zum Backend erstellen und fehlerbehebung 
-* Claude.ai: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js
+* Es soll möglich werden eigene Anleitungen zu erstellen und diese dann zu bearbeiten
+* Bilder hinzufügen Button in der Galerie
