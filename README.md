@@ -30,7 +30,7 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 * Auf WCAG und APCA Kontraste getestet
 
 ## Inhaltsverzeichnis
-1. [Technologien](#technologien)
+1. Technologien
 2. Screenshots
 3. Instalation & Nutzen
 4. Nutzung/Deployment
@@ -40,15 +40,15 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 
 
 ## Technologie
-*  Frontend: Visual Studio Code
-*  Backend: Node.js, Express
-*  Datenbank: MongoDB (Atlas)
-*  CSS-Framework: Bootstrap
+*  **Frontend:** Visual Studio Code
+*  **Backend:** Node.js, Express
+*  **Datenbank:** MongoDB (Atlas)
+*  **CSS-Framework:** Bootstrap
 
 ## Screenshots
 
 ### Startseite von FadenZauber
-
+Die St
 <img width="1903" height="914" alt="Image" src="https://github.com/user-attachments/assets/2a3523ab-ffe3-44a3-a5c3-e8fb7fb70d4e" />
 
 <img width="1901" height="872" alt="Image" src="https://github.com/user-attachments/assets/100b88d8-a710-4e4b-b134-52f80ae032ba" />
@@ -128,7 +128,14 @@ Das Hamburger-Menü ist ein Menü-Icon mit drei horizontalen Linien, das vor all
 
 ## Nutzung & Deployment
 
-## Weitere geplante Featurs
+### Voraussetzungen
+Stelle sicher, dass folgende Software installiert ist:
+* Node.js
+* Git
+* MongoDB (lokal oder über Atlas)
+
+1. Projekt clonen
+
 
 ## KI-Nutzung und Hilfmittel
 YouTube Videos
@@ -136,4 +143,6 @@ YouTube Videos
 *  beim einbetten von den Yt Videos hat mir dieses [Video](https://youtu.be/ScWBbaQp-Jg?si=Jk9-G7Gv9w63Qeae)sehr geholfen
 *  zum erstellen der Readme kann ich dieses [Video](https://youtu.be/EN6d6djVIJI?si=Xy3bcAzNw3VKzGya) empfehlen
 * **perplexity.ai**: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
-* **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js 
+* **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js
+
+## Weitere geplante Featurs
