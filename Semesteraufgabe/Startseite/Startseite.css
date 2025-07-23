@@ -117,10 +117,10 @@ body {
             
 
             /* Responsive Design */
-            @media (max-width: 1024px) {
+            @media (max-width: 1024px) { /* -------- TABLET: max. 1024px -------- */
                 .wrapper {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 25px;
+                    grid-template-columns: repeat(2, 1fr); /* Karten-Layout: 2 Spalten statt z. B. 4 */
+                    gap: 25px;/* Weniger Abstand zwischen Karten */
                 }
                 
                 .Kategorien {
@@ -136,39 +136,41 @@ body {
                 }
             }
 
+
+/* -------- KLEINE TABLETS & GROSSE HANDYS: max. 768px -------- */
             @media (max-width: 768px) {
                 .wrapper {
                     grid-template-columns: repeat(2, 1fr);
                     gap: 20px;
                 }
                 
-                .kategorien-titel {
+                .kategorien-titel {  /* Überschrift der Sektion wird kleiner */
                     font-size: 1.8rem;
                     margin-bottom: 30px;
                 }
                 
-                .kategorien-section {
+                .kategorien-section {  /* Weniger Innenabstand (Padding) an den Seiten */
                     padding: 40px 15px 30px 15px;
                 }
             }
 
-        @media (max-width: 480px) {
+        @media (max-width: 480px) { /* -------- SMARTPHONES: max. 480px -------- */
               .wrapper {
-                        grid-template-columns: 1fr;
+                        grid-template-columns: 1fr; /* Karten werden untereinander angezeigt (1 Spalte) */
                         gap: 25px;
                       }
                 
                 .Kategorien {
-                    height: 350px;
+                    height: 350px; /* Kartenhöhe reduziert für kleinere Displays */
                 }
                 
-                .kategorien-titel {
+                .kategorien-titel { /*Überschrift noch kleiner */
                     font-size: 1.5rem;
                     margin-bottom: 25px;
                 }
                 
                 .häkelimage img {
-                    height: 250px;
+                    height: 250px; /* Bild ebenfalls kleiner, um auf Bildschirm zu passen */
                 }
             }
 

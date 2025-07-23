@@ -1,345 +1,340 @@
 /* =====================
-   RESET & BASE STYLES
+   RESET & BASE STYLES - Grundeinstellungen für alle Elemente
 =======================*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Padding/Border werden in width/height einberechnet */
+    margin: 0;              /* Alle Standard-Außenabstände entfernen */
+    padding: 0;             /* Alle Standard-Innenabstände entfernen */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Standard-Schriftart */
+    background-color: #f8f9fa; /* Heller grauer Hintergrund */
 }
 
 /* ==================
-   HEADER CONTAINER
+   HEADER CONTAINER - Hauptcontainer für den gesamten Header
  ====================*/
 header {
-    width: 100%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;                                    /* Volle Breite */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);    /* Schatten unter dem Header */
 }
 
 /* ================================
-   TOP BAR - Logo, Suchfeld, etc.
+   TOP BAR - Oberer Bereich mit Logo, Suchfeld und rechter Sektion
 =================================== */
 .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: white;
-    border-bottom: none;
+    display: flex;                    /* Flexbox für horizontale Anordnung */
+    justify-content: space-between;   /* Elemente gleichmäßig verteilen */
+    align-items: center;              /* Vertikal zentrieren */
+    padding: 15px 40px;               /* Innenabstand oben/unten 15px, links/rechts 40px */
+    background: white;                /* Weißer Hintergrund */
+    border-bottom: none;              /* Kein unterer Rand */
 }
 
-/* Logo Sektion */
+/* Logo Sektion - Logo + Text nebeneinander */
 .logo-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex;        /* Flexbox für horizontale Anordnung */
+    align-items: center;  /* Vertikal zentrieren */
+    gap: 10px;           /* 10px Abstand zwischen Logo und Text */
 }
 
 .logo-image {
-    width: 90px;
-    height: auto;
+    width: 90px;     /* Logo-Breite */
+    height: auto;    /* Höhe automatisch (proportional) */
 }
 
 .logo-text {
-    font-size: 32px;
-    font-weight: bold;
-    color: rgb(131, 39, 39);
+    font-size: 32px;              /* Große Schrift für Firmenname */
+    font-weight: bold;            /* Fett */
+    color: rgb(131, 39, 39);     /* Dunkelrote Farbe */
 }
 
-/* Suchfeld Container */
+/* Suchfeld Container - Zentrierter Suchbereich */
 .search-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;                /* Flexbox */
+    align-items: center;          /* Vertikal zentrieren */
+    justify-content: center;      /* Horizontal zentrieren */
+    flex: 1;                     /* Nimmt verfügbaren Platz ein */
+    max-width: 500px;            /* Maximale Breite */
+    margin: 0 auto;              /* Automatische Zentrierung */
 }
 
 .search-box {
-    display: flex;
-    background-color: white;
-    border: 2px solid #eee;
-    border-radius: 9999px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 0 10px;
-    width: 100%;
-    max-width: 400px;
+    display: flex;                              /* Flexbox für Input + Button */
+    background-color: white;                    /* Weißer Hintergrund */
+    border: 2px solid #eee;                    /* Hellgrauer Rand */
+    border-radius: 9999px;                     /* Komplett runde Ecken */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    padding: 0 10px;                           /* Innenabstand links/rechts */
+    width: 100%;                               /* Volle Container-Breite */
+    max-width: 400px;                          /* Maximale Breite */
 }
 
 .search-input {
-    flex: 1;
-    border: none;
-    outline: none;
-    padding: 8px 15px;
-    font-size: 16px;
-    background-color: transparent;
+    flex: 1;                    /* Nimmt verfügbaren Platz ein */
+    border: none;               /* Kein eigener Rand */
+    outline: none;              /* Kein Fokus-Rahmen */
+    padding: 8px 15px;          /* Innenabstand */
+    font-size: 16px;            /* Schriftgröße */
+    background-color: transparent; /* Durchsichtiger Hintergrund */
 }
 
 .search-button {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background-color: rgb(207, 121, 121);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 9999px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    display: flex;                              /* Flexbox für Icon + Text */
+    align-items: center;                        /* Vertikal zentrieren */
+    gap: 6px;                                   /* Abstand zwischen Icon und Text */
+    background-color: rgb(207, 121, 121);       /* Hellrote Hintergrundfarbe */
+    color: white;                               /* Weiße Schrift */
+    border: none;                               /* Kein Rand */
+    padding: 8px 16px;                          /* Innenabstand */
+    font-size: 14px;                            /* Schriftgröße */
+    border-radius: 9999px;                      /* Runde Ecken */
+    cursor: pointer;                            /* Zeiger-Cursor */
+    transition: background-color 0.3s ease;     /* Sanfte Farbänderung bei Hover */
 }
 
 .search-button:hover {
-    background-color: brown;
+    background-color: brown;    /* Dunklere Farbe beim Hovern */
 }
 
 .search-button i {
-    width: 16px;
-    height: 16px;
+    width: 16px;     /* Icon-Breite */
+    height: 16px;    /* Icon-Höhe */
 }
 
-/* Rechte Sektion der Top Bar */
+/* Rechte Sektion der Top Bar - Platz für User-Menü, etc. */
 .top-bar-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: #666;
-    min-width: 120px; /* Platz für zukünftige Elemente */
+    display: flex;        /* Flexbox */
+    align-items: center;  /* Vertikal zentrieren */
+    gap: 20px;           /* Abstand zwischen Elementen */
+    color: #666;         /* Graue Textfarbe */
+    min-width: 120px;    /* Mindestbreite für zukünftige Elemente */
 }
 
 /* ===================
-   DESKTOP NAVIGATION
+   DESKTOP NAVIGATION - Hauptnavigation für Desktop
 =====================*/
 .nav-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: rgb(207, 121, 121);
-    width: 100%;
-  
+    display: flex;                        /* Flexbox */
+    justify-content: center;              /* Horizontal zentrieren */
+    align-items: center;                  /* Vertikal zentrieren */
+    padding: 15px 20px;                   /* Innenabstand */
+    background-color: rgb(207, 121, 121); /* Hellrote Hintergrundfarbe */
+    width: 100%;                          /* Volle Breite */
 }
 
-
-
 .navbar {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
+    list-style: none;    /* Keine Aufzählungspunkte */
+    display: flex;       /* Horizontale Anordnung */
+    gap: 40px;          /* 40px Abstand zwischen Menüpunkten */
+    margin: 0;          /* Kein Außenabstand */
+    padding: 0;         /* Kein Innenabstand */
 }
 
 .navbar li a {
-    font-size: 20px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 20px;
-    position: relative;
+    font-size: 20px;                        /* Schriftgröße */
+    font-weight: 500;                       /* Mittlere Schriftstärke */
+    color: white;                           /* Weiße Schrift */
+    text-decoration: none;                  /* Keine Unterstreichung */
+    transition: all 0.3s ease;              /* Sanfte Übergänge */
+    padding: 8px 16px;                      /* Innenabstand */
+    border-radius: 20px;                    /* Runde Ecken */
+    position: relative;                     /* Für spätere Effekte */
 }
 
 .navbar li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.2);  /* Halbtransparente weiße Box beim Hovern */
+    transform: translateY(-1px);            /* Leichte Bewegung nach oben */
 }
 
 /* ==================
-   MOBILE NAVIGATION
+   MOBILE NAVIGATION - Navigation für kleinere Bildschirme
 ===================*/
 .mobile-nav {
-    display: none;
-    background: white;
-    border-bottom: 1px solid #eee;
-    padding: 12px;
+    display: none;                /* Standardmäßig ausgeblendet */
+    background: white;            /* Weißer Hintergrund */
+    border-bottom: 1px solid #eee; /* Unterer Rand */
+    padding: 12px;                /* Innenabstand */
 }
 
 .mobile-nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 48px;
+    display: flex;              /* Flexbox */
+    align-items: center;        /* Vertikal zentrieren */
+    justify-content: space-between; /* Platz zwischen Elementen */
+    height: 48px;               /* Feste Höhe */
 }
 
 .slide-nav-toggle {
-    background: white;
-    border: none;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    gap: 2px;
-    height: 48px;
-    min-width: 48px;
+    background: white;          /* Weißer Hintergrund */
+    border: none;               /* Kein Rand */
+    padding: 8px;               /* Innenabstand */
+    display: flex;              /* Flexbox */
+    flex-direction: column;     /* Vertikal anordnen */
+    align-items: center;        /* Horizontal zentrieren */
+    justify-content: center;    /* Vertikal zentrieren */
+    cursor: pointer;            /* Zeiger-Cursor */
+    gap: 2px;                   /* Kleiner Abstand */
+    height: 48px;               /* Feste Höhe */
+    min-width: 48px;            /* Mindestbreite */
 }
 
 .slide-nav-toggle i {
-    font-size: 18px;
-    color: brown;
+    font-size: 18px;    /* Icon-Größe */
+    color: brown;       /* Braune Farbe */
 }
 
 .slide-nav-toggle span {
-    font-size: 10px;
-    font-weight: bold;
-    color: brown;
+    font-size: 10px;    /* Kleine Schrift */
+    font-weight: bold;  /* Fett */
+    color: brown;       /* Braune Farbe */
 }
 
 /* ===================
-   SLIDE MENU (Mobile)
+   SLIDE MENU (Mobile) - Ausklappbares Seitenmenü
  =====================*/
-/* Overlay - Dunkler Hintergrund */
+
+/* Overlay - Dunkler Hintergrund hinter dem Menü */
 .slide-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
+    position: fixed;                /* Feste Position */
+    top: 0;                        /* Oben am Bildschirm */
+    left: 0;                       /* Links am Bildschirm */
+    width: 100%;                   /* Volle Breite */
+    height: 100%;                  /* Volle Höhe */
+    background: rgba(0, 0, 0, 0.5); /* Halbtransparenter schwarzer Hintergrund */
+    z-index: 999;                  /* Über anderen Elementen */
+    display: none;                 /* Standardmäßig ausgeblendet */
 }
 
 .slide-menu-overlay.show {
-    display: block;
+    display: block;    /* Einblenden wenn "show" Klasse gesetzt */
 }
 
-/* Slide Menu Container */
+/* Slide Menu Container - Das eigentliche Menü */
 .slide-menu {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background: white;
-    z-index: 1000;
-    transition: left 0.3s ease;
-    overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;                          /* Feste Position */
+    top: 0;                                   /* Oben am Bildschirm */
+    left: -300px;                             /* Links außerhalb des Bildschirms (versteckt) */
+    width: 300px;                             /* 300px breit */
+    height: 100%;                             /* Volle Höhe */
+    background: white;                        /* Weißer Hintergrund */
+    z-index: 1000;                           /* Über dem Overlay */
+    transition: left 0.3s ease;              /* Sanfte Animation beim Ein-/Ausblenden */
+    overflow-y: auto;                        /* Scrollbar wenn Inhalt zu lang */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Schatten rechts */
 }
 
 .slide-menu.show {
-    left: 0;
+    left: 0;    /* Einblenden: Menü auf Position 0 (sichtbar) verschieben */
 }
 
-/* Slide Menu Header */
+/* Slide Menu Header - Kopfbereich des Menüs */
 .slide-menu-header {
-    padding: 20px;
-    background: #f8f9fa;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;                  /* Innenabstand */
+    background: #f8f9fa;            /* Hellgrauer Hintergrund */
+    border-bottom: 1px solid #eee;  /* Unterer Rand */
+    display: flex;                  /* Flexbox */
+    justify-content: space-between; /* Titel links, X-Button rechts */
+    align-items: center;            /* Vertikal zentrieren */
 }
 
 .slide-menu-close {
-    background: none;
-    border: none;
-    font-size: 20px;
-    color: #666;
-    cursor: pointer;
+    background: none;    /* Kein Hintergrund */
+    border: none;        /* Kein Rand */
+    font-size: 20px;     /* Größe des X */
+    color: #666;         /* Graue Farbe */
+    cursor: pointer;     /* Zeiger-Cursor */
 }
 
-/* Slide Menu Navigation */
+/* Slide Menu Navigation - Menüpunkte */
 .slide-menu-navigation {
-    padding: 0;
+    padding: 0;    /* Kein Innenabstand */
 }
 
 .slide-menu-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;    /* Keine Aufzählungspunkte */
+    margin: 0;           /* Kein Außenabstand */
+    padding: 0;          /* Kein Innenabstand */
 }
 
-
 .slide-menu-nav li:last-child {
-    border-bottom: none;
+    border-bottom: none;    /* Letzter Menüpunkt hat keinen unteren Rand */
 }
 
 .slide-menu-nav li a {
-    border-bottom: 1px solid #eee;
-    display: block;
-    padding: 15px 20px;
-    color: #333;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-size: 20px;
+    border-bottom: 1px solid #eee;        /* Unterer Rand zwischen Menüpunkten */
+    display: block;                       /* Block-Element (volle Breite klickbar) */
+    padding: 15px 20px;                   /* Innenabstand */
+    color: #333;                          /* Dunkle Schriftfarbe */
+    text-decoration: none;                /* Keine Unterstreichung */
+    transition: background-color 0.3s ease; /* Sanfte Hintergrundänderung */
+    font-size: 20px;                      /* Schriftgröße */
 }
 
 .slide-menu-nav a:hover {
-    background: #f8f9fa;
-    color: rgb(207, 121, 121);
+    background: #f8f9fa;              /* Hellgrauer Hintergrund beim Hovern */
+    color: rgb(207, 121, 121);        /* Rote Schriftfarbe beim Hovern */
 }
 
-
-/* Vorbereitung: Die umgebende Box muss positioniert sein */
+/* Vorbereitung: Die umgebende Box muss positioniert sein für absolute Positionierung */
 .search-container {
-    position: relative;
+    position: relative;    /* Relative Positionierung für absolute Kindelemente */
 }
 
 /*=========================
-  Autocoplete Suchfunktion
+  Autocomplete Suchfunktion - Dropdown mit Suchvorschlägen
 ===========================*/
 
-
 .result-box {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    border-radius: 0 0 9999px 9999px;
-    border-top: none; /* Kein Rand oben */
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    max-height: 300px;
-    overflow-y: auto;
-    border-radius: 0 0 10px 10px;
+    position: absolute;                     /* Absolute Positionierung */
+    top: 100%;                             /* Direkt unter dem Suchfeld */
+    left: 0;                               /* Links bündig mit Suchfeld */
+    width: 100%;                           /* Gleiche Breite wie Suchfeld */
+    background-color: white;               /* Weißer Hintergrund */
+    border-radius: 0 0 9999px 9999px;     /* Nur unten runde Ecken */
+    border-top: none;                      /* Kein oberer Rand (verbindet mit Suchfeld) */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Schatten */
+    z-index: 999;                          /* Über anderen Elementen */
+    max-height: 300px;                     /* Maximale Höhe */
+    overflow-y: auto;                      /* Scrollbar wenn zu viele Ergebnisse */
+    border-radius: 0 0 10px 10px;          /* Korrigierte runde Ecken unten */
 }
 
-/* Inhalt formatieren */
+/* Inhalt formatieren - Listenstil für Suchergebnisse */
 .result-box ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;    /* Keine Aufzählungspunkte */
+    margin: 0;           /* Kein Außenabstand */
+    padding: 0;          /* Kein Innenabstand */
 }
 
 .result-box ul li {
-    padding: 10px 15px;
-    border-bottom: 1px solid #eee;
-    background: white;
-    transition: background-color 0.2s;
-    cursor: pointer;
+    padding: 10px 15px;                    /* Innenabstand */
+    border-bottom: 1px solid #eee;         /* Trennlinie zwischen Ergebnissen */
+    background: white;                     /* Weißer Hintergrund */
+    transition: background-color 0.2s;     /* Sanfte Hintergrundänderung */
+    cursor: pointer;                       /* Zeiger-Cursor (klickbar) */
 }
 
 .result-box ul li:hover {
-    background-color: #f7eaea;
+    background-color: #f7eaea;    /* Hellrosa Hintergrund beim Hovern */
 }
 
 /* ===================================
-   RESPONSIVE DESIGN - MEDIA QUERIES
+   RESPONSIVE DESIGN - MEDIA QUERIES - Anpassungen für verschiedene Bildschirmgrößen
    =================================== */
 
-/* Tablet Landscape (bis 1024px) */
+/* Tablet Landscape (bis 1024px) - Kleinere Tablets im Querformat */
 @media (max-width: 1024px) {
     .top-bar {
-        padding: 15px 30px;
+        padding: 15px 30px;    /* Weniger Seitenabstand */
     }
     
     .navbar {
-        gap: 30px;
+        gap: 30px;    /* Weniger Abstand zwischen Menüpunkten */
     }
     
     .search-container {
-        max-width: 400px;
+        max-width: 400px;    /* Kleinere maximale Suchfeld-Breite */
     }
 }
 
@@ -347,103 +342,102 @@ header {
 @media (max-width: 900px) {
     /* Desktop Navigation ausblenden */
     .nav-wrapper {
-        display: none;
+        display: none;    /* Desktop-Menü verstecken */
     }
     
     /* Mobile Navigation einblenden */
     .mobile-nav {
-        display: block;
+        display: block;    /* Mobile Navigation zeigen */
     }
     
     .top-bar {
-        padding: 15px 20px;
+        padding: 15px 20px;    /* Weniger Seitenabstand */
     }
     
     .search-box {
-        max-width: 300px;
+        max-width: 300px;    /* Kleinere Suchfeld-Breite */
     }
 }
 
-/* Mobile Large (bis 768px) */
+/* Mobile Large (bis 768px) - Größere Smartphones */
 @media (max-width: 768px) {
     .top-bar {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-        padding: 15px;
+        flex-direction: column;    /* Elemente vertikal anordnen */
+        gap: 15px;                /* Abstand zwischen den Zeilen */
+        text-align: center;       /* Text zentrieren */
+        padding: 15px;            /* Weniger Abstand */
     }
     
     .search-container {
-        order: 2;
-        max-width: 100%;
+        order: 2;           /* Suchfeld als zweites Element */
+        max-width: 100%;    /* Volle Breite nutzen */
     }
     
     .search-box {
-        max-width: 100%;
+        max-width: 100%;    /* Suchfeld über volle Breite */
     }
     
     .top-bar-right {
-        order: 1;
+        order: 1;    /* Rechte Sektion als erstes Element */
     }
     
     .logo-text {
-        font-size: 24px;
+        font-size: 24px;    /* Kleinere Logo-Schrift */
     }
     
     .logo-image {
-        width: 60px;
+        width: 60px;    /* Kleineres Logo */
     }
     
     .search-input {
-        padding: 10px 15px;
-        font-size: 14px;
+        padding: 10px 15px;    /* Mehr Innenabstand für Touch */
+        font-size: 14px;       /* Kleinere Schrift */
     }
     
     .search-button {
-        padding: 10px 15px;
+        padding: 10px 15px;    /* Mehr Innenabstand für Touch */
     }
 }
 
-
-/* Mobile Small (bis 480px) */
+/* Mobile Small (bis 480px) - Kleine Smartphones */
 @media (max-width: 480px) {
     .top-bar {
-        padding: 10px;
+        padding: 10px;    /* Minimaler Abstand */
     }
     
     .logo-text {
-        font-size: 20px;
+        font-size: 20px;    /* Noch kleinere Logo-Schrift */
     }
     
     .logo-image {
-        width: 50px;
+        width: 50px;    /* Noch kleineres Logo */
     }
     
     .slide-menu {
-        width: 280px;
-        left: -280px;
+        width: 280px;     /* Schmaleres Slide-Menü */
+        left: -280px;     /* Entsprechend angepasste Start-Position */
     }
 }
 
-/* Desktop Large (ab 1200px) */
+/* Desktop Large (ab 1200px) - Große Desktop-Bildschirme */
 @media (min-width: 1200px) {
     .top-bar {
-        padding: 20px 60px;
+        padding: 20px 60px;    /* Mehr Seitenabstand */
     }
     
     .nav-wrapper {
-        padding: 15px 60px;
+        padding: 15px 60px;    /* Mehr Seitenabstand */
     }
     
     .search-container {
-        max-width: 600px;
+        max-width: 600px;    /* Größere maximale Suchfeld-Breite */
     }
     
     .search-box {
-        max-width: 500px;
+        max-width: 500px;    /* Größeres Suchfeld */
     }
     
     .navbar {
-        gap: 50px;
+        gap: 50px;    /* Mehr Abstand zwischen Menüpunkten */
     }
 }

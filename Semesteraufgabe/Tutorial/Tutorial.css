@@ -1,68 +1,78 @@
-/* Container – zentriert und begrenzt */
-.container{
-    max-width:1200px;       /* Seitenbreite begrenzen */
-    margin:20px auto;       /* oben/unten 20 px, links/rechts zentriert */
-    padding:0 1rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+/* Container: zentriert das Layout und begrenzt die Breite */
+.container {
+    max-width: 1200px;         /* Maximale Breite des Inhaltsbereichs */
+    margin: 20px auto;         /* Vertikaler Abstand oben/unten, horizontal zentriert */
+    padding: 0 1rem;           /* Horizontaler Innenabstand */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Grundschriftart */
 }
 
-/* Überschrift */
-.page-title{
-    text-align:center;
-    color: #8b4b3b;
-    margin:50px;        /* Abstand nach unten */
-    font-size: 30px;
+/* === Überschrift - Häkel- Techniken === */
+.page-title {
+    text-align: center;        /* Zentriert die Überschrift */
+    color: #8b4b3b;          /* Dunkelbraune Farbe */
+    margin: 50px;              /* Abstand oben und unten */
+    font-size: 30px;           /* Schriftgröße */
 }
 
-/* Wrapper für alle Tutorial-Karten */
-.tutorials{
-    display:grid;                               /* CSS-Grid aktivieren   */
-    grid-template-columns:repeat(auto-fit, minmax(400px,1fr)); /* … mind. 350 px breit */
-    gap:60px;                                   /* Abstand zwischen Karten */
+
+/* === Tutorial-Galerie === */
+
+/* (Video-Karten) */
+.tutorials {
+    display: grid;       /* CSS Grid Layout */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Automatisch passende Spalten, mind. 400px breit, max. so viel wie Platz ist */
+    gap: 60px;        /* Abstand zwischen den Karten */
 }
 
-/*  Karte*/
-.tutorial-item{
-    background:#fff;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(168, 154, 154, 0.1);
-    overflow:hidden;         /* runde Ecken auch fürs Video */
+/* Einzelne Tutorial-Karte */
+.tutorial-item {
+    background: #fff;            /* Weißer Hintergrund */
+    border-radius: 12px;            /* Abgerundete Ecken */
+    box-shadow: 0 4px 15px rgba(168, 154, 154, 0.1); /* Leichter Schatten */
+    overflow: hidden;               /* Damit Video die runden Ecken nicht überschreitet */
 }
 
-/* Video titel */
-.tutorial-title{
-    background:#e8d6d6;
-    color: #8b4b3b;
-    font-size:1.3rem;
-    text-align:center;
-    margin:0;
-    padding:1rem;
+/* Titel innerhalb der Karte */
+.tutorial-title {
+    background: #e8d6d6;    /* Heller Hintergrund */
+    color: #8b4b3b;        /* Titel in dunklem Braun */
+    font-size: 1.3rem;      /* Etwas größere Schrift */
+    text-align: center;     /* Zentriert */
+    margin: 0;              /* Kein Außenabstand */
+    padding: 1rem;          /* Innenabstand oben/unten */
 }
 
-/* Responsive Video 16:9 */
-.video-container{
-    position:relative;
-    padding-bottom:56.25%;   /* 9/16 */
-}
-.video-container iframe{
-    position:absolute;
-    inset:0;                 /* top/right/bottom/left:0 */
-    width:100%;
-    height:100%;
-    border:0;
+/* === Video-Einbinden=== */
+
+/* Wrapper für YouTube-Video: Seitenverhältnis */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;   /* 16:9 Verhältnis  */
 }
 
-/* Beschreibungstext */
-.tutorial-description{
-    padding:1.2rem;
-    text-align:left;
-    line-height:1.6;
-    color:#555;
+/* Eingebettetes YouTube-Video (iframe) */
+.video-container iframe {
+    position: absolute;
+    inset: 0;                 /* top, right, bottom, left = 0 */
+    width: 100%;              /* Video füllt Container vollständig */
+    height: 100%;
+    border: 0;                /* Kein Rahmen */
 }
-footer 
-  {
-  background-color: #f8f9fa;
-  padding: 20px 100px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  }
+
+/* === Beschreibungstext unter dem Video === */
+
+.tutorial-description {
+    padding: 1.2rem;          /* Innenabstand */
+    text-align: left;         /* Text linksbündig */
+    line-height: 1.6;         /* Zeilenhöhe für bessere Lesbarkeit */
+    color: #555;              /* Dunkelgraue Schriftfarbe */
+}
+
+/* === Footer-Bereich der Seite === */
+
+footer {
+    background-color: #f8f9fa;  /* Sehr helles Grau als Hintergrund */
+    padding: 20px 100px;        /* Oben/unten 20px, links/rechts 100px Abstand */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Einheitliche Schrift */
+    text-align: center;         /* Text zentrieren */
+}

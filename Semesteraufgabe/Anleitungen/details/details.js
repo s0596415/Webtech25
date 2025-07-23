@@ -1,21 +1,37 @@
-let count = 0;          // Zähler
-let step = 1;           // Schrittweite
+let count = 0;          // Aktueller Zähler-Wert (startet bei 0)
+let step = 1;           // Schrittweite für +/- Buttons (standardmäßig 1)
 
-function add() {        // Erhöhen
-    count += step;
-    update();
+
+/*Plus Funktion*/ 
+function add() {        
+    count += step;      // Zähler um aktuelle Schrittweite erhöhen
+    update();          // Anzeige aktualisieren
 }
 
-function subtract() {   // Verringern  
-    if (count >= step) count -= step;
-    update();
+/*       MINUS-FUNKTION - Zähler verringern
+aufgerufrote Minus-Button 
+ */
+function subtract() {   
+    if (count >= step) {    // Nur verringern wenn Zähler größer/gleich Schrittweite
+        count -= step;      // Zähler um aktuelle Schrittweite verringern
+    }
+    // WICHTIG: Verhindert negative Zahlen!
+    // Wenn count < step, passiert nichts
+    update();              // Anzeige aktualisieren
 }
 
-function reset() {      // Zurücksetzen
-    count = 0;
-    update();
+/* RESET-FUNKTION - Zähler zurücksetzen
+ */
+function reset() {      
+    count = 0;          // Zähler auf 0 zurücksetzen
+    update();          // Anzeige aktualisieren
 }
 
-function update() {     // Anzeige aktualisieren
+/*UPDATE-FUNKTION - Anzeige im Browser aktualisieren
+ * Wird von allen anderen Funktionen aufgerufen
+ * Sorgt dafür, dass der Benutzer die Änderung sieht
+ */
+function update() {     
+    // HTML-Element mit ID 'counter' finden und Text ändern
     document.getElementById('counter').textContent = count;
 }

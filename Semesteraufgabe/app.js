@@ -1,31 +1,30 @@
 
 // === Konfiguration ===
-const API_BASE_URL = 'http://localhost:3000/api/anleitung';
-let aktuelleAnleitung = null;
+const API_BASE_URL = 'http://localhost:3000/api/anleitung';// Basis-URL für API-Anfragen
+let aktuelleAnleitung = null; // Speichert die aktuell geladene Anleitung
 
-// === AppState ===
 const AppState = {
-    currentImageIndex: 0,
-    isEditing: false,
-    maschenZaehler: 0,
-    zaehlerSchritt: 1,
-    anleitung: null // Wird nach dem Laden gesetzt!
+    currentImageIndex: 0,   // Aktuelles Bild (z. B. aus Galerie)
+    isEditing: false,       // Ist gerade der Bearbeitungsmodus aktiv?
+    maschenZaehler: 0,      // Zähler z. B. für Maschen in der Anleitung
+    zaehlerSchritt: 1,      // Zähl-Schritte: Standard = 1 (kann auch 10 sein)
+    anleitung: null         // Speicher für die aktuell geladene Anleitung vom Server
 };
 
-let editData = {};
-const bilder = [
-   
-];
+let editData = {};          // Kopie der Anleitung für das Bearbeiten (ohne Änderungen direkt in AppState)
 
 
-
-// === Anleitung laden ===
+// === Funktion zum Laden einer Anleitung von der API ===
 async function ladeAnleitung(id) {
+    // Anfrage an den Server schicken
     const response = await fetch(`${API_BASE_URL}/${id}`);
     if (response.ok) {
+        // Wenn erfolgreich: JSON-Daten laden
         const anleitung = await response.json();
         AppState.anleitung = anleitung;
         aktuelleAnleitung = anleitung;
+
+        // Alles auf der Seite neu darstellen
         renderAll();
     } else {
         alert('Anleitung konnte nicht geladen werden!');

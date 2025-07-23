@@ -1,139 +1,178 @@
-/* Hauptcontainer für Kategorien */
-        .kategorien-section {
-            padding: 60px 20px 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+/* KATEGORIEN-SEKTION - Hauptbereich für die Anzeige der Häkel-Kategorien*/
 
-        .kategorien-titel {
-            color: #8b4b3b;
-            font-size: 40px;
-            margin-bottom: 40px;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 600;
-        }
+/* Hauptcontainer für die gesamte Kategorien-Sektion */
+.kategorien-section {
+    padding: 60px 20px 40px 20px;    /* Innenabstand: 60px oben, 20px links/rechts, 40px unten */
+    max-width: 1200px;               /* Maximale Breite des Containers */
+    margin: 0 auto;                  /* Automatische Zentrierung horizontal */
+}
 
-        .wrapper {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
+/* Titel der Kategorien-Sektion */
+.kategorien-titel {
+    color: #8b4b3b;                  /* Braune Textfarbe */
+    font-size: 40px;                 /* Große Schriftgröße */
+    margin-bottom: 40px;             /* 40px Abstand nach unten */
+    text-align: center;              /* Text horizontal zentrieren */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Schriftart */
+    font-weight: 600;                /* Schrift etwas dicker (semi-bold) */
+}
 
-        .Kategorien {
-            border: 1px solid rgb(245, 245, 245);
-            display: flex;
-            flex-direction: column;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-            text-decoration: none;
-            color:#5D3636; /*Farbe Text*/
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        
-            height: 350px; /* Feste Höhe für alle Kästen */
-        }
+/* GRID-LAYOUT - Rasteranordnung der Kategorie-Karten*/
 
-        .Kategorien:hover {
-            transform: translateY(-5px);
-            box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
-        }
+/* Container für die Kategorie-Karten im Grid-Layout */
+.wrapper {
+    display: grid;                         /* CSS Grid Layout verwenden */
+    grid-template-columns: repeat(4, 1fr); /* 4 gleich breite Spalten */
+    gap: 20px;                            /* 20px Abstand zwischen den Karten */
+}
 
-        .häkelname {
-            text-align: center;
-            padding: 15px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-weight: 660;
-            font-size: 1.3rem;
-            background:#F6EAEA; /*Farbe kasten vom text*/
-            border-bottom: 1px solid #eee;
-            margin: 0;
-            min-height: 60px; /* Mindesthöhe für Titel */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+/* KATEGORIE-KARTEN - Einzelne Häkel-Kategorie Boxen*/
 
-        .häkelname p {
-            margin: 0;
-        }
+/* Einzelne Kategorie-Karte */
+.Kategorien {
+    border: 1px solid rgb(245, 245, 245);              /* Sehr heller grauer Rand */
+    display: flex;                                      /* Flexbox für vertikale Anordnung */
+    flex-direction: column;                             /* Elemente vertikal stapeln */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; /* Schatten: grau, 20% transparent, 8px vertikal, 24px Unschärfe */
+    text-decoration: none;                              /* Keine Unterstreichung bei Links */
+    color: #5D3636;                                     /* Dunkelbraune Textfarbe */
+    border-radius: 8px;                                 /* Runde Ecken */
+    overflow: hidden;                                   /* Inhalt der über Rand hinausgeht verstecken */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Sanfte Animation für Bewegung und Schatten */
+    height: 350px;                                      /* Feste Höhe für alle Karten (einheitlich) */
+}
 
-        .häkelimage {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            background: rgb(255, 255, 255);
-        }
+/* Hover-Effekt für Kategorie-Karten */
+.Kategorien:hover {
+    transform: translateY(-5px);                         /* 5px nach oben bewegen */
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px; /* Stärkerer Schatten: 30% transparent, 12px vertikal, 32px Unschärfe */
+}
 
-        .häkelimage img {
-            width: 100%;
-            height: 250px; /* Größere Bilder */
-            object-fit: cover;
-            border-radius: 4px;
-        }
+/* KATEGORIE-NAMEN - Titel-Bereich der Karten*/
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .wrapper {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
-            }
-            
-            .Kategorien {
-                height: 400px; /* Etwas höher auf Tablet */
-            }
-            
-            .häkelimage img {
-                height: 300px; /* Größere Bilder auf Tablet */
-            }
-            
-            .häkelname {
-                font-size: 1.4rem; /* Größere Schrift */
-            }
-        }
+/* Container für den Kategorie-Namen */
+.häkelname {
+    text-align: center;              /* Text zentrieren */
+    padding: 15px;                   /* 15px Innenabstand */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Schriftart */
+    font-weight: 660;                /* Sehr dicke Schrift */
+    font-size: 1.3rem;               /* 1.3x die Standard-Schriftgröße */
+    background: #F6EAEA;             /* Hellrosa Hintergrund */
+    border-bottom: 1px solid #eee;   /* Dünne graue Linie unten */
+    margin: 0;                       /* Kein Außenabstand */
+    min-height: 60px;                /* Mindesthöhe für einheitliche Titel-Bereiche */
+    display: flex;                   /* Flexbox für Zentrierung */
+    align-items: center;             /* Vertikal zentrieren */
+    justify-content: center;         /* Horizontal zentrieren */
+}
 
-        @media (max-width: 768px) {
-            .wrapper {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-            
-            .kategorien-titel {
-                font-size: 1.8rem;
-                margin-bottom: 30px;
-            }
-            
-            .kategorien-section {
-                padding: 40px 15px 30px 15px;
-            }
-        }
+/* Paragraph-Element im Titel-Bereich */
+.häkelname p {
+    margin: 0;    /* Kein Außenabstand für saubere Zentrierung */
+}
 
-        @media (max-width: 480px) {
-            .wrapper {
-                grid-template-columns: 1fr;
-                gap: 25px;
-            }
-            
-            .Kategorien {
-                height: 350px;
-            }
-            
-            .kategorien-titel {
-                font-size: 1.5rem;
-                margin-bottom: 25px;
-            }
-            
-            .häkelimage img {
-                height: 250px;
-            }
-        }
+/* KATEGORIE-BILDER - Bild-Bereich der Karten*/
 
-      footer 
-  {
-  background-color:#f8f9fa;
-  padding: 20px 100px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  } 
+/* Container für das Kategorie-Bild */
+.häkelimage {
+    flex: 1;                        /* Nimmt den restlichen verfügbaren Platz ein */
+    display: flex;                  /* Flexbox für Bild-Zentrierung */
+    align-items: center;            /* Vertikal zentrieren */
+    justify-content: center;        /* Horizontal zentrieren */
+    padding: 15px;                  /* 15px Innenabstand */
+    background: rgb(255, 255, 255); /* Weißer Hintergrund */
+}
+
+/* Das eigentliche Bild */
+.häkelimage img {
+    width: 100%;            /* Volle Breite des Containers */
+    height: 250px;          /* Feste Höhe für einheitliche Darstellung */
+    object-fit: cover;      /* Bild zuschneiden um Proportionen zu erhalten */
+    border-radius: 4px;     /* Leicht runde Ecken */
+}
+
+/*RESPONSIVE DESIGN */
+
+/* TABLET LANDSCAPE (bis 1024px) - Mittelgroße Bildschirme */
+@media (max-width: 1024px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr); /* 3 Spalten statt 4 */
+        gap: 25px;                             /* Mehr Abstand zwischen Karten */
+    }
+    
+    .Kategorien {
+        height: 400px;    /* Karten etwas höher machen */
+    }
+    
+    .häkelimage img {
+        height: 300px;    /* Größere Bilder */
+    }
+    
+    .häkelname {
+        font-size: 1.4rem;    /* Größere Schrift für bessere Lesbarkeit */
+    }
+}
+
+/* TABLET PORTRAIT (bis 768px) - Kleinere Tablets und große Smartphones */
+@media (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+        gap: 10px;                             /* Weniger Abstand (Platz sparen) */
+    }
+    
+    .kategorien-titel {
+        font-size: 1.8rem;      /* Kleinerer Haupttitel */
+        margin-bottom: 30px;    /* Weniger Abstand nach unten */
+    }
+    
+    .kategorien-section {
+        padding: 40px 15px 30px 15px;    /* Weniger Padding (Platz sparen) */
+    }
+}
+
+/* MOBILE (bis 480px) - Kleine Smartphones */
+@media (max-width: 480px) {
+    .wrapper {
+        grid-template-columns: 1fr;    /* Nur 1 Spalte (untereinander) */
+        gap: 25px;                     /* Mehr Abstand für bessere Übersicht */
+    }
+    
+    .Kategorien {
+        height: 350px;    /* Standardhöhe beibehalten */
+    }
+    
+    .kategorien-titel {
+        font-size: 1.5rem;      /* Noch kleinerer Titel */
+        margin-bottom: 25px;    /* Weniger Abstand */
+    }
+    
+    .häkelimage img {
+        height: 250px;    /* Kleinere Bilder */
+    }
+}
+
+
+footer {
+    background-color: #f8f9fa;        /* Sehr heller grauer Hintergrund */
+    padding: 20px 100px;              /* 20px oben/unten, 100px links/rechts */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Schriftart */
+    text-align: center;               /* Text zentrieren */
+}
+
+/* 
+
+CSS GRID:
+- grid-template-columns: repeat(4, 1fr) = 4 gleich breite Spalten
+- 1fr = 1 Fraction (Bruchteil des verfügbaren Platzes)
+- gap = Abstand zwischen Grid-Elementen
+
+FLEXBOX:
+- flex: 1 = Element nimmt allen verfügbaren Platz
+- flex-direction: column = Kinder vertikal anordnen
+- align-items: center = vertikal zentrieren
+- justify-content: center = horizontal zentrieren
+
+OBJECT-FIT:
+- cover = Bild zuschneiden um Container zu füllen
+- contain = Bild komplett anzeigen (mit möglichen Leerräumen)
+- fill = Bild verzerren um Container zu füllen

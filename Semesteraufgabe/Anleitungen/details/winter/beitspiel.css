@@ -8,10 +8,7 @@ body {
     padding: 20px;
 }
 
-h2{
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 /* === LAYOUT === */
 .main-grid {
     display: grid;
@@ -71,8 +68,8 @@ h2{
 
 /* === YOUTUBE === */
 .youtube-container { display: flex; align-items: center; gap: 10px; }
-.youtube-icon { color: #ef4444; font-size: 20px; }
-.youtube-link { color: #3b82f6; text-decoration: none; }
+.youtube-icon { color: #ef4444; font-size: 20px; }/*Pfeil*/
+.youtube-link { color: #3b82f6; text-decoration: none; }/*Link*/
 
 /* === COUNTER === */
 .counter-display { text-align: center; margin: 30px 0; }
@@ -80,7 +77,7 @@ h2{
 .counter-number {
     font-size: 70px;
     font-weight: bold;
-    color: #e91e63;
+    color: #e91e63; /*ZAhl über Masche*/
     margin-bottom: 10px;
 }
 
@@ -97,11 +94,11 @@ h2{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background: #e5e7eb;
-    color: #374151;
+    background: #e5e7eb; /*KAsten farbe 10er*/
+    color: #374151; /*Text farbe 10er, 20er*/
 }
 
-.step-btn.active { background: #e91e63; color: white; }
+.step-btn.active { background: #e91e63; color: white; } /*einer*/
 
 .counter-buttons {
     display: flex;
@@ -121,10 +118,10 @@ h2{
     color: white;
 }
 
-.counter-btn.minus { background: rgb(213, 114, 114); }
-.counter-btn.plus { background: rgb(79, 179, 97); }
+.counter-btn.minus { background: rgb(213, 114, 114); } /*MInus*/
+.counter-btn.plus { background: rgb(79, 179, 97); }/*Plus*/
 
-.reset-btn {
+.reset-btn {/*Zurücksetzen*/
     width: 100%;
     padding: 12px;
     background: #555960;

@@ -1,228 +1,344 @@
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background: white;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .main-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        @media (min-width: 1024px) {
-            .main-grid { grid-template-columns: 1fr 1fr; }
-        }
-        
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-    
-        /* Image Section */
-        .image-container {
-            position: relative;
-            aspect-ratio: 1;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 20px;
-        }
-        
-        .image-container img { width: 100%; height: 100%; object-fit: cover; }
-        
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.9);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-            font-size: 20px;
-        }
-        .nav-arrow.left { left: 10px; }
-        .nav-arrow.right { right: 10px; }
-        
-        .image-counter {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255,255,255,0.9);
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-        
-        /* Counter Section */
-        .counter-display {
-            text-align: center;
-            margin-bottom: 30px;
-            
-        }
-        .counter-number {
-            font-size: 70px;
-            font-weight: bold;
-            color:rgb(17, 17, 17);
-            margin-bottom: 10px;
-        }
-        
-        .step-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .step-btn {
-            padding: 5px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background: #e5e7eb;
-            color: #374151;
-        }
-        .step-btn.active { background: #e9a2a2; color: white; }
-        
-        .counter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .counter-btn {
-            width: 60px;
-            height: 60px;
-            border: none;
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-            color: white;
-        }
-        .counter-btn.minus { background: rgb(211, 114, 114); }
-        .counter-btn.plus { background: rgb(121, 207, 137); }
-        
-        .reset-btn {
-            display: block;
-            margin: 0 auto;
-            padding: 10px 20px;
-            background: #a4a6aa;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        /* Edit Controls */
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .btn {
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .btn.blue { background: #08c16e; color: white; }
-        .btn.green { background: #22c55e; color: white; }
-        .btn.gray { background: #6b7280; color: white; }
-        .btn.red { background: #ef4444; color: white; }
-        
-        /* Content Sections */
-        .material-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-        .material-dot {
-            width: 8px;
-            height: 8px;
-            background: #f472b6;
-            border-radius: 50%;
-        }
-        
-        .round-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 15px;
-            margin-bottom: 8px;
-            background: #f9fafb;
-            border-radius: 8px;
-        }
-        .round-item.completed {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-        }
-        .round-text { font-weight: 500; color: #ec4899; }
-        .round-text.completed { color: #15803d; text-decoration: line-through; }
-        
-        .comments-box {
-            padding: 15px;
-            background: #fffbeb;
-            border-left: 4px solid #fbbf24;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        
-        .hidden { display: none !important; }
-        
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #d1d5db;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        
-        .edit-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-        .edit-row input { margin-bottom: 0; }
-        
-        .add-btn {
-            background: #3b82f6;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        .gradient-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(90deg, #f472b6, #a855f7);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        footer 
-  {
-  background-color: #ffffff;
-  padding: 20px 100px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  }
+/* =====================
+   RESET & BASE STYLES - Grundeinstellungen
+=======================*/
+* { 
+    margin: 0;              /* Alle Standard-Außenabstände entfernen */
+    padding: 0;             /* Alle Standard-Innenabstände entfernen */
+    box-sizing: border-box; /* Padding/Border in width/height einberechnen */
+}
+
+/* Grundeinstellungen für die gesamte Seite */
+body {
+    font-family: system-ui, -apple-system, sans-serif; /* Moderne System-Schriftart */
+    background: white;      /* Weißer Seitenhintergrund */
+    min-height: 100vh;      /* Mindesthöhe = volle Bildschirmhöhe */
+    padding: 20px;          /* 20px Abstand an allen Seiten */
+}
+
+/* =====================
+   LAYOUT GRID - Hauptlayout der Seite
+=======================*/
+
+/* Hauptraster für das Seitenlayout */
+.main-grid {
+    display: grid;                 /* CSS Grid Layout */
+    grid-template-columns: 1fr;    /* Mobile: 1 Spalte */
+    gap: 30px;                     /* 30px Abstand zwischen Bereichen */
+}
+
+/* Desktop: 2-spaltiges Layout */
+@media (min-width: 1024px) {
+    .main-grid { 
+        grid-template-columns: 1fr 1fr; /* 2 gleich breite Spalten */
+    }
+}
+
+/* =====================
+   CARD DESIGN - Karten-Container
+=======================*/
+
+/* Grundlegende Karten-Optik */
+.card {
+    background: white;                                   /* Weißer Kartenhintergrund */
+    border-radius: 10px;                                /* Runde Ecken */
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 12px 32px; /* GRAUER SCHATTEN für Tiefeneffekt */
+    padding: 20px;                                       /* Innenabstand */
+    margin-bottom: 20px;                                 /* Abstand nach unten */
+}
+
+/* =====================
+   BILD-SEKTION - Bildergalerie mit Navigation
+=======================*/
+
+/* Container für Bilder mit quadratischem Format */
+.image-container {
+    position: relative;    /* Für absolute Positionierung der Pfeile */
+    aspect-ratio: 1;       /* Quadratisches Seitenverhältnis (1:1) */
+    border-radius: 10px;   /* Runde Ecken */
+    overflow: hidden;      /* Überstehende Inhalte verstecken */
+    margin-bottom: 20px;   /* Abstand nach unten */
+}
+
+/* Bilder in der Galerie */
+.image-container img { 
+    width: 100%;       /* Volle Breite */
+    height: 100%;      /* Volle Höhe */
+    object-fit: cover; /* Bild zuschneiden um Container zu füllen */
+}
+
+/* Navigations-Pfeile für Bildergalerie */
+.nav-arrow {
+    position: absolute;                     /* Absolute Positionierung über dem Bild */
+    top: 50%;                              /* Vertikal zentriert */
+    transform: translateY(-50%);           /* Exakte vertikale Zentrierung */
+    background: rgba(255,255,255,0.9);     /* WEISS mit 90% Deckkraft */
+    border: none;                          /* Kein Rand */
+    border-radius: 50%;                    /* Kreisförmig */
+    width: 40px;                           /* Breite */
+    height: 40px;                          /* Höhe */
+    cursor: pointer;                       /* Zeiger-Cursor */
+    font-size: 20px;                       /* Pfeil-Symbol Größe */
+}
+.nav-arrow.left { left: 10px; }           /* Linker Pfeil: 10px vom linken Rand */
+.nav-arrow.right { right: 10px; }         /* Rechter Pfeil: 10px vom rechten Rand */
+
+/* Bild-Zähler (z.B. "2/5") */
+.image-counter {
+    position: absolute;                     /* Absolute Positionierung */
+    bottom: 15px;                          /* 15px vom unteren Rand */
+    left: 50%;                             /* Horizontal zentriert */
+    transform: translateX(-50%);           /* Exakte horizontale Zentrierung */
+    background: rgba(255,255,255,0.9);     /* WEISS mit 90% Deckkraft */
+    padding: 5px 15px;                     /* Innenabstand */
+    border-radius: 20px;                   /* Stark runde Ecken */
+}
+
+/* =====================
+   ZÄHLER-SEKTION - Runden-Zähler Interface
+=======================*/
+
+/* Anzeige des aktuellen Zähler-Wertes */
+.counter-display {
+    text-align: center;   /* Text zentrieren */
+    margin-bottom: 30px;  /* Abstand nach unten */
+}
+
+/* Die große Zähler-Zahl */
+.counter-number {
+    font-size: 70px;             /* Sehr große Schrift */
+    font-weight: bold;           /* Fette Schrift */
+    color: rgb(17, 17, 17);      /* FAST SCHWARZ (sehr dunkles Grau) */
+    margin-bottom: 10px;         /* Abstand nach unten */
+}
+
+/* Container für Schritt-Auswahl Buttons */
+.step-controls {
+    display: flex;           /* Flexbox für horizontale Anordnung */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center;     /* Vertikal zentrieren */
+    gap: 15px;              /* 15px Abstand zwischen Buttons */
+    margin-bottom: 30px;     /* Abstand nach unten */
+}
+
+/* Schritt-Auswahl Buttons (z.B. +1, +5, +10) */
+.step-btn {
+    padding: 5px 15px;       /* Innenabstand */
+    border: none;            /* Kein Rand */
+    border-radius: 5px;      /* Runde Ecken */
+    cursor: pointer;         /* Zeiger-Cursor */
+    background: #e5e7eb;     /* HELLGRAU (inaktiv) */
+    color: #374151;          /* DUNKELGRAU Text (inaktiv) */
+}
+.step-btn.active { 
+    background: #e9a2a2;     /* HELLROT (aktiver Button) */
+    color: white;            /* WEISS Text (aktiv) */
+}
+
+/* Container für Plus/Minus Buttons */
+.counter-buttons {
+    display: flex;           /* Flexbox */
+    justify-content: center; /* Horizontal zentrieren */
+    gap: 20px;              /* 20px Abstand zwischen Buttons */
+    margin-bottom: 20px;     /* Abstand nach unten */
+}
+
+/* Plus/Minus Buttons */
+.counter-btn {
+    width: 60px;            /* Breite */
+    height: 60px;           /* Höhe (kreisförmig) */
+    border: none;           /* Kein Rand */
+    border-radius: 50%;     /* Kreisförmig */
+    font-size: 24px;        /* Große Schrift für + und - */
+    font-weight: bold;      /* Fette Schrift */
+    cursor: pointer;        /* Zeiger-Cursor */
+    color: white;           /* WEISS Text */
+}
+.counter-btn.minus { 
+    background: rgb(211, 114, 114); /* HELLROT für Minus-Button */
+}
+.counter-btn.plus { 
+    background: rgb(121, 207, 137); /* HELLGRÜN für Plus-Button */
+}
+
+/* Reset-Button */
+.reset-btn {
+    display: block;        /* Block-Element */
+    margin: 0 auto;        /* Automatische Zentrierung */
+    padding: 10px 20px;    /* Innenabstand */
+    background: #a4a6aa;   /* MITTELGRAU */
+    color: white;          /* WEISS Text */
+    border: none;          /* Kein Rand */
+    border-radius: 5px;    /* Runde Ecken */
+    cursor: pointer;       /* Zeiger-Cursor */
+}
+
+/* =====================
+   BEARBEITUNGS-KONTROLLEN - Edit/Save/Cancel Buttons
+=======================*/
+
+/* Header mit Titel und Bearbeiten-Button */
+.section-header {
+    display: flex;              /* Flexbox */
+    justify-content: space-between; /* Titel links, Button rechts */
+    align-items: center;        /* Vertikal zentrieren */
+    margin-bottom: 20px;        /* Abstand nach unten */
+}
+
+/* Basis-Button Styling */
+.btn {
+    padding: 8px 16px;      /* Innenabstand */
+    border: none;           /* Kein Rand */
+    border-radius: 5px;     /* Runde Ecken */
+    cursor: pointer;        /* Zeiger-Cursor */
+    font-weight: 500;       /* Mittlere Schriftstärke */
+    display: inline-flex;   /* Inline-Flex für Icon + Text */
+    align-items: center;    /* Vertikal zentrieren */
+    gap: 5px;              /* Abstand zwischen Icon und Text */
+}
+
+/* Button-Farben für verschiedene Aktionen */
+.btn.blue { 
+    background: #08c16e;    /* GRÜN (eigentlich, trotz Klassenname "blue") */
+    color: white;           /* WEISS Text */
+}
+.btn.green { 
+    background: #22c55e;    /* HELLGRÜN */
+    color: white;           /* WEISS Text */
+}
+.btn.gray { 
+    background: #6b7280;    /* DUNKELGRAU */
+    color: white;           /* WEISS Text */
+}
+.btn.red { 
+    background: #ef4444;    /* ROT */
+    color: white;           /* WEISS Text */
+}
+
+/* =====================
+   INHALT-SEKTIONEN - Materialien, Runden, Kommentare
+=======================*/
+
+/* Einzelner Material-Eintrag */
+.material-item {
+    display: flex;       /* Flexbox für Punkt + Text */
+    align-items: center; /* Vertikal zentrieren */
+    gap: 10px;          /* Abstand zwischen Punkt und Text */
+    margin-bottom: 8px;  /* Abstand nach unten */
+}
+
+/* Aufzählungspunkt für Materialien */
+.material-dot {
+    width: 8px;              /* Breite */
+    height: 8px;             /* Höhe */
+    background: #f472b6;     /* PINK/MAGENTA */
+    border-radius: 50%;      /* Kreisförmig */
+}
+
+/* Einzelne Runde/Schritt */
+.round-item {
+    display: flex;          /* Flexbox */
+    align-items: center;    /* Vertikal zentrieren */
+    gap: 15px;             /* Abstand zwischen Elementen */
+    padding: 15px;         /* Innenabstand */
+    margin-bottom: 8px;     /* Abstand nach unten */
+    background: #f9fafb;    /* SEHR HELLGRAU (normale Runde) */
+    border-radius: 8px;     /* Runde Ecken */
+}
+
+/* Abgeschlossene Runde */
+.round-item.completed {
+    background: #f0fdf4;            /* SEHR HELLGRÜN (abgeschlossen) */
+    border: 1px solid #bbf7d0;      /* HELLGRÜNER RAND */
+}
+
+/* Text einer Runde */
+.round-text { 
+    font-weight: 500;    /* Mittlere Schriftstärke */
+    color: #ec4899;      /* PINK/MAGENTA (normale Runde) */
+}
+.round-text.completed { 
+    color: #15803d;              /* DUNKELGRÜN (abgeschlossen) */
+    text-decoration: line-through; /* Durchgestrichen */
+}
+
+/* Kommentar-Box */
+.comments-box {
+    padding: 15px;                      /* Innenabstand */
+    background: #fffbeb;                /* SEHR HELLES GELB/BEIGE */
+    border-left: 4px solid #fbbf24;     /* GELBER LINKER RAND (4px dick) */
+    border-radius: 0 8px 8px 0;         /* Runde Ecken nur rechts */
+}
+
+/* =====================
+   HILFSELEMENTE - Verstecken und Formulare
+=======================*/
+
+/* Element komplett verstecken */
+.hidden { 
+    display: none !important; /* !important überschreibt andere Regeln */
+}
+
+/* Eingabefelder und Textbereiche */
+input, textarea {
+    width: 100%;               /* Volle Breite */
+    padding: 10px;             /* Innenabstand */
+    border: 1px solid #d1d5db; /* HELLGRAUER RAND */
+    border-radius: 5px;        /* Runde Ecken */
+    margin-bottom: 10px;       /* Abstand nach unten */
+}
+
+/* Zeile mit mehreren Eingabefeldern */
+.edit-row {
+    display: flex;       /* Flexbox für nebeneinander */
+    gap: 10px;          /* Abstand zwischen Feldern */
+    margin-bottom: 10px; /* Abstand nach unten */
+}
+.edit-row input { 
+    margin-bottom: 0;    /* Kein Abstand nach unten (wird durch .edit-row geregelt) */
+}
+
+
+
+
+
+footer {
+    background-color: #ffffff;        /* WEISS */
+    padding: 20px 100px;              /* Innenabstand */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Schriftart */
+    text-align: center;               /* Text zentrieren */
+}
+
+/* =====================
+   FARBSCHEMA DER WEBSEITE - Übersicht wo welche Farben verwendet werden:
+=======================
+
+🎨 HAUPTFARBEN:
+- WEISS (#ffffff): Seitenhintergrund, Karten, Text auf farbigen Buttons
+- GRAU-TÖNE: Schatten, Ränder, inaktive Elemente
+- HELLGRAU (#f9fafb): Normale Runden-Hintergrund
+- DUNKELGRAU/SCHWARZ (#374151, #111111): Haupttext
+
+🔴 ROT-TÖNE:
+- HELLROT (#e9a2a2): Aktive Schritt-Buttons
+- ROT (#ef4444): Löschen-Buttons
+- HELLROT (rgb(211,114,114)): Minus-Button
+
+🟢 GRÜN-TÖNE:
+- HELLGRÜN (rgb(121,207,137)): Plus-Button
+- GRÜN (#08c16e, #22c55e): Speichern/Bearbeiten-Buttons
+- HELLGRÜN (#f0fdf4): Abgeschlossene Runden-Hintergrund
+- DUNKELGRÜN (#15803d): Abgeschlossene Runden-Text
+
+🟡 GELB-TÖNE:
+- GELB (#fbbf24): Linker Rand der Kommentar-Box
+- HELLES GELB/BEIGE (#fffbeb): Kommentar-Box Hintergrund
+
+🟣 PINK/LILA-TÖNE:
+- PINK/MAGENTA (#f472b6, #ec4899): Material-Punkte, Runden-Text
+- LILA (#a855f7): Teil des Gradient-Buttons
+- PINK-zu-LILA GRADIENT: Auffälliger Action-Button
+
+🔵 BLAU-TÖNE:
+- BLAU (#3b82f6): Hinzufügen-Buttons
+
+*/
