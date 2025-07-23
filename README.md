@@ -31,7 +31,6 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 1. Technologien
 2. Screenshots
 3. Instalation & Nutzen
-4. Nutzung/Deployment
 5. KI-Nutzung und YouTube Videos
 6. Weitere  geplante Featurs
 
@@ -158,7 +157,15 @@ nun starten wir den Server
 ```Bash
 node server.js
 ```
-
+### 4. Frondend starten
+#### 1. wechsel in den Ordner Semesteraufgabe (frontend)
+```Bash
+cd Webtech25/Semesteraufgabe
+```
+#### 2. frontend starten
+```Bash
+code .
+```
 
 ## KI-Nutzung und Hilfmittel
 YouTube Videos
@@ -168,4 +175,9 @@ YouTube Videos
 * **perplexity.ai**: bei fragen zum Backend erstellen und fehlerbehebung (z.b unterschiedliche ports)
 * **Claude.ai**: hat geholfen beim erstellen vom Maschenzähler und bei fragen zum js
 
+
+
 ## Weitere geplante Featurs
+
+* Es soll möglich werden eigene Anleitungen zu erstellen und diese dann zu bearbeiten
+* Bilder hinzufügen Button in der Galerie
