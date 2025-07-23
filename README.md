@@ -30,12 +30,12 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 * Auf WCAG und APCA Kontraste getestet
 
 ## Inhaltsverzeichnis
-1. Technologien
-2. Screenshots
-3. Instalation & Nutzen
-4. Nutzung/Deployment
-5. KI-Nutzung
-6. Weitere  geplante Featurs
+1. [Technologien](Technologie)
+2. [Screenshots](Screenshots)
+3. [Instalation & Nutzen](Instalation&Nutzen)
+4. [Nutzung/Deployment]
+5. [KI-Nutzung und YouTube Videos]
+6. [Weitere  geplante Featurs]
 
 
 
