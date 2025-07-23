@@ -6,7 +6,7 @@ Ob Materiallisten, Rundenübersichten oder persönliche Kommentare zu jedem Proj
 Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihre Projekte mit Herz und Struktur gestalten möchten.
 
 ## Features 
-#### Individuelle Häkelanleitungen erstellen und bearbeiten
+#### Individuelle Häkelanleitungen verwalten
 
 * Materialien verwalten
 
@@ -15,8 +15,6 @@ Fadenzauber ist für alle, die das Häkeln lieben, ihre Ideen festhalten und ihr
 * Persönliche Kommentare oder Notizen hinterlegen
 
 #### Eigene Projekt-Galerie
-
-* Fotos und Fortschritte speichern
 
 * Lieblingsprojekte immer im Blick behalten
 
@@ -126,8 +124,6 @@ Das Hamburger-Menü ist ein Menü-Icon mit drei horizontalen Linien, das vor all
 
 ## Instalation & Nutzung
 
-## Nutzung & Deployment
-
 ### Voraussetzungen
 Stelle sicher, dass folgende Software installiert ist:
 * Node.js
@@ -135,7 +131,9 @@ Stelle sicher, dass folgende Software installiert ist:
 * MongoDB (lokal oder über Atlas)
 
 ### 1. Projekt clonen
-
+´´´Bash
+git clone https://github.com/s0596415/Webtech25.git
+´´´
 
 ## KI-Nutzung und Hilfmittel
 YouTube Videos
